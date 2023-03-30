@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'GT Eesti Pro Display';
+    src: url('../static/fonts/GTEestiProDisplay-Bold.ttf');
+}
+
+$colorT: #212121;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'GT Eesti Pro', sans-serif;
+}
+
+.img-con{
+    width: 100%;
+    object-fit: contain;
+}
+
+.img-cov{
+    width: 100%;
+    object-fit: cover;
+}
+
+.common{
+  width: 1560px;
+  margin: 0 auto;
+}
+
+.ml-0{
+    margin-left: 0 !important;
+}
+.df-cen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dfc-cen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainT{
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 46px;
+    color: $colorT;
+    margin: 0;
+}
+
+.mainP{
+    font-size: 1.35rem;
+    line-height: 26px;
+    font-weight: 500;
+    color: #212121;
+    margin: 0;
+}
+
+.commonT{
+    font-size: 3.15rem;
+    font-weight: 500;
+    line-height: 100%;
+    margin: 0;
+}
+
+.descGr{
+    font-size: 1.25rem;
+    line-height: 23px;
+    font-weight: 400;
+    color: #898989;
+}
+
+.commonP{
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 100%;
+    color: #212121;
+    margin: 0;
+}
+
+.miniP{
+    font-size: 1.15rem;
+    line-height: 140%;
+    font-weight: 400;
+    margin: 0;
+}
+
+.btn{
+  width: 290px;
+  height: 70px;
+  border-radius: 64px;
+  cursor: pointer;
+}
+
+.travelB{
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    background: #03a6a0;
+    border: 0;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 140%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 1440px) and (min-width: 960px) {
+  .common{
+    width: 920px !important;
+  }
+
+  .travelB{
+    width: 100%;
+    height: 42px;
+    font-size: 1rem !important;
+}
+
+  .btn{
+    width: 210px !important;
+    height: 60px !important;
+  }
+    .maxW{
+        max-width: 920px !important;
+    }
+
+    .mainT{
+        font-size: 1.5rem !important;
+        line-height: 34px !important;
+    }
+    .mainP{
+        font-size: 1.15rem !important;
+    }
+    .descGr{
+        font-size: 1rem !important;
+    }
+
+    .commonP{
+        font-size: 1rem !important;
+    }
+    .miniP{
+        font-size: 1rem !important;
+    }
+    
+}
+
+@media screen and (max-width: 960px) {
+
+    .common{
+        width: 320px !important;
+    }
+    .maxW{
+        max-width: 320px !important;
+    }
+
+    .commonT{
+        font-size: 2.25rem !important;
+    }
+
+    .commonP{
+        font-size: 1rem !important;
+    }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "travel_agency",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/vue-fontawesome": "^2.0.10",
+    "ant-design-vue": "^1.7.8",
+    "core-js": "^3.25.3",
+    "nuxt": "^2.15.8",
+    "swiper-vue2": "^1.0.10",
+    "vue": "^2.7.10",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "sass": "^1.59.3",
+    "sass-loader": "^10.4.1"
+  }
+}
