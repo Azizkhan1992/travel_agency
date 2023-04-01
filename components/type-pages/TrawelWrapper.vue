@@ -122,9 +122,6 @@ export default {
             // console.log('slide change')
         }
     },
-    mounted() {
-        console.log(this.places)
-    }
 }
 </script>
 <style lang="scss">
@@ -352,8 +349,13 @@ export default {
     .travelItemsContainer {
 
         .travelInfo{
+
+            p.mainT{
+                font-size: 1.5rem !important;
+            }
             
             .saleRow{
+                top: -9%;
                 right: -10%;
             }
         }

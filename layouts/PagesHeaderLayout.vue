@@ -2,11 +2,11 @@
     <div class="pagesHeaderContainer common">
         <PageListModal :class="$store.state.isOpen ? 'open' : 'close'"/>
         <a-row type="flex" justify="space-between">
-            <a-col :span="2">
+            <a-col :span="4">
                 <font-awesome-icon :icon="['fas', 'bars']" size="3x" class="open" @click="open"/>
             </a-col>
 
-            <a-col :span="6">
+            <a-col :span="5">
                 <nuxt-link to="/">
                     <img src="../static/images/logo3.png" alt="" class="pageLogo">
                 </nuxt-link>
@@ -18,8 +18,9 @@
                         <font-awesome-icon :icon="['fas', 'magnifying-glass']" size="2x"/>
                     </a-col>
 
-                    <a-col :span="4" class="item world">
+                    <a-col :span="4" class="item world" @click="isLang = ! isLang">
                         <font-awesome-icon :icon="['fas', 'globe']" size="2x"/>
+                        <SelectLanguage :class="isLang ? 'open' : 'close'"/>
                     </a-col>
 
                     <a-col :span="4" class="item user">
@@ -32,9 +33,15 @@
 </template>
 <script>
 import PageListModal from '../components/modals/PageListModal.vue';
+import SelectLanguage from '../components/SelectLanguage.vue';
 export default {
     name: 'pages-header',
-    components: {PageListModal},
+    components: {PageListModal, SelectLanguage},
+    data(){
+        return{
+            isLang: false
+        }
+    },
     methods: {
         open(){
             this.$store.commit('changeOpen')
@@ -61,6 +68,7 @@ export default {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                cursor: pointer;
             }
         }
 

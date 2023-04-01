@@ -1,14 +1,16 @@
 @font-face {
     font-family: 'GT Eesti Pro Display';
-    src: url('../static/fonts/GTEestiProDisplay-Bold.ttf');
+    src: url('../static/fonts/GTEestiProText-Bold.ttf');
 }
 
 $colorT: #212121;
 
 body {
+    height: fit-content;
   margin: 0;
   padding: 0;
   font-family: 'GT Eesti Pro', sans-serif;
+  position: relative;
 }
 
 .img-con{
@@ -50,6 +52,14 @@ body {
     margin: 0;
 }
 
+.titleP{
+    font-size: 2rem;
+    line-height: 140%;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+
 .mainP{
     font-size: 1.35rem;
     line-height: 26px;
@@ -75,7 +85,7 @@ body {
 .commonP{
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 100%;
+    line-height: 140%;
     color: #212121;
     margin: 0;
 }
@@ -96,7 +106,7 @@ body {
 
 .travelB{
     width: 100%;
-    height: 60px;
+    height: 64px;
     border-radius: 8px;
     background: #03a6a0;
     border: 0;
@@ -105,6 +115,41 @@ body {
     line-height: 140%;
     font-weight: 500;
     cursor: pointer;
+
+    &:hover{
+        background: #fff;
+        color: #03a6a0;
+        border: 1px solid #03a6a0;
+    }
+}
+
+.travelBB{
+    width: 499px;
+    height: 60px;
+    border: 1px solid #03a6a0;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1.25rem;
+    line-height: 140%;
+    font-weight: 500;
+    color: #03a6a0;
+    cursor: pointer;
+}
+
+.dBtn{
+    width: 100%;
+    height: 64px;
+    border: 1px solid #03a6a0;
+    font-size: 1.25rem;
+    line-height: 140%;
+    font-weight: 500;
+    color: #03a6a0;
+
+    &:hover{
+        background: #03a6a0;
+        color: #fff;
+        border: 0;
+    }
 }
 
 
@@ -121,6 +166,16 @@ body {
     font-size: 1rem !important;
 }
 
+.travelBB{
+    width: 399px !important;
+    height: 50px !important;
+}
+
+.dBtn{
+    height: 42px;
+    font-size: 1rem !important;
+}
+
   .btn{
     width: 210px !important;
     height: 60px !important;
@@ -129,10 +184,10 @@ body {
         max-width: 920px !important;
     }
 
-    .mainT{
-        font-size: 1.5rem !important;
-        line-height: 34px !important;
+    .titleP{
+        font-size: 1.25rem !important;
     }
+
     .mainP{
         font-size: 1.15rem !important;
     }

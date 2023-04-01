@@ -1,6 +1,6 @@
 <template>
-    <div class="datepickerContainer">
-        <a-date-picker @change="onChange" :placeholder="placeholder" />
+    <div class="datepickerContainer" style="position: relative;">
+        <a-date-picker :popupStyle="{color: '#ccc'}" dropdownClassName="calendar-drop" :getCalendarContainer="getCalendarContainer()" @change="onChange" :placeholder="placeholder" class="customDatepicker" />
     </div>
 </template>
 <script>
@@ -17,6 +17,11 @@ export default {
         }
     },
     methods: {
+        getCalendarContainer(){
+            return (triggerNode) => {
+                return triggerNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode;
+            }
+        },
         onChange(date, dateString) {
             if(this.dateType === 'begin'){
                 this.$store.commit('changeTravelBegin', dateString)
@@ -28,6 +33,12 @@ export default {
 }
 </script>
 <style lang="scss">
+.filterCol{
+    .ant-calendar-picker-container{
+        left: 0 !important;
+        top: 420px !important;
+    }
+}
 .datepickerContainer{
     height: 56px;
     margin-top: 20px;

@@ -11,10 +11,12 @@
                     </div>
                 </a-col>
                 <a-col :xs="{ span: 8 }" :lg="{ span: 6 }" class="topIcons">
-                    <div class="languages icons">
+                    <div class="languages icons" @click="isLang = !isLang">
                         <img src="../static/images/world.png" alt="">
+                        <SelectLanguage :class="isLang ? 'open' : 'close'"/>
+
                     </div>
-                    <div class="person icons">
+                    <div class="person icons" @click="goToPage">
                         <img src="../static/images/person.png" alt="">
                     </div>
                 </a-col>
@@ -44,15 +46,16 @@
                                 {{ !date ? 'Borish vaqti' : date }}
                             </p>
                         </div>
-                        <a-date-picker @change="onChange">
+                        
+                        <a-month-picker  @change="onChange">
                             <font-awesome-icon icon="fa-solid fa-chevron-down" />
-                        </a-date-picker>
+                        </a-month-picker>
                     </div>
                 </a-col>
 
                 <a-col :xs="{ span: 24 }" :lg="{ span: 6 }" :xxl="{ span: 7 }">
                     <div class="dropContainer">
-                        <Dropdown :placehold="'Tur'" :img="'Address.png'" :drop-items="travelLocation" />
+                        <Dropdown :placehold="'Tur'" :img="'Address.png'" :drop-items="types" />
                     </div>
                 </a-col>
 
@@ -87,17 +90,22 @@
 </template>
 <script>
 import Dropdown from '../components/Dropdown.vue';
+import SelectLanguage from '../components/SelectLanguage.vue';
 export default {
     name: 'header-layout',
-    components: { Dropdown },
+    components: { Dropdown, SelectLanguage },
     data() {
         return {
             travelLocation: [
-                { id: 1, name: 'London' },
-                { id: 2, name: 'Istambul' },
-                { id: 3, name: 'Dubai' }
+                { id: 1, name: 'New Zealend' },
+                { id: 2, name: 'India' },
+                { id: 3, name: 'Asia' },
+                {id: 4, name: 'Morocco'},
+                {id: 5, name: 'Iceland'}
             ],
-            date: null
+            types: this.$store.state.travelTypes,
+            date: null,
+            isLang: false
         }
     },
     methods: {
@@ -107,11 +115,20 @@ export default {
 
         open(){
             this.$store.commit('changeOpen')
+        },
+        goToPage(){
+            this.$router.push({name: 'login'})
         }
     }
 }
 </script>
 <style lang="scss">
+
+.ant-calendar-picker-container {
+    left: 480px !important;
+    top: 480px !important;
+}
+
 .headerLayout {
   height: 742px;
   position: relative;
@@ -163,6 +180,11 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
+
+            &.languages{
+                position: relative;
+            }
     
             img{
                 width: 28px;
@@ -317,10 +339,7 @@ export default {
     }
 }
 
-.ant-calendar-picker-container {
-    left: 480px !important;
-    top: 500px !important;
-}
+
 
 .topFilter {
     height: 180px;
@@ -435,6 +454,9 @@ export default {
 }
 
 @media screen and (max-width: 1440px) and (min-width: 960px) {
+    .ant-calendar-picker-container{
+        left: 380px !important;
+    }
     .offerItems {
         .offerTitle {
             span {

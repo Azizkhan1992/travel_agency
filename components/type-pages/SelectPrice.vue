@@ -9,7 +9,7 @@
                     <a-input :defaultValue="100" v-model="minPrice" @change="minChange" placeholder="Narx" />
                 </a-col>
                 <a-col :span="10">
-                    <a-input :defaultValue="10000" v-model="maxPrice" placeholder="Narx" />
+                    <a-input :defaultValue="10000" v-model="maxPrice" placeholder="Narx" @change="maxChange" />
                 </a-col>
             </a-row>
             <a-row type="flex" justify="space-between" class="limitRow">
@@ -21,8 +21,7 @@
                 </a-col>
             </a-row>
             <a-row>
-                <a-slider range :min="100" :max="10000" :step="10" :default-value="[100, 2000]"
-                    @afterChange="onAfterChange" />
+                <a-slider range :min="100" :max="10000" :step="10" :default-value="[100, 2000]" v-model="rangeValue" @afterChange="onAfterChange" />
             </a-row>
         </a-row>
     </div>
@@ -36,18 +35,20 @@ export default {
         return {
             minPrice: 100,
             maxPrice: 10000,
-            isOpen: false
+            isOpen: false,
+            rangeValue: [100, 500]
         }
     },
     methods: {
         onAfterChange(value) {
-            this.minPrice = value[0]
-            this.maxPrice = value[1]
-            console.log(value)
+            this.minPrice = value[0];
+            this.maxPrice = value[1];
         },
-        minChange(e) {
-            this.minPrice = e.target.value
-            console.log(this.minPrice)
+        minChange() {
+            this.rangeValue = [+this.minPrice, +this.maxPrice];
+        },
+        maxChange() {
+            this.rangeValue = [+this.minPrice, +this.maxPrice];
         },
         sendData() {
             this.isOpen = !this.isOpen

@@ -13,10 +13,10 @@ export default {
 </script>
 
 <style lang="scss">
-.ant-calendar-picker-container {
-    left: 186px !important;
-    top: 700px !important;
-}
+// .ant-calendar-picker-container {
+//     left: 186px !important;
+//     top: 700px !important;
+// }
 
 .rangeDatepickerContainer {
     position: relative;

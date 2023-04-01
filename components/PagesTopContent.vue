@@ -32,9 +32,6 @@ export default {
             default: ''
         }
     },
-    mounted() {
-        console.log(this.bgImg)
-    }
 }
 </script>
 <style lang="scss">

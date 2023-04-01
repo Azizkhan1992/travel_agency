@@ -88,9 +88,27 @@ export const state = () => ({
         }
     ],
 
-    TravelContinius: null,
-    travelBegin: null,
-    travelEnd: null,
+    travelTypes: [
+        {
+            id: 1,
+            title: 'Barcha turlar',
+            descript: 'Barcha turlar ko‘rsatilsin',
+            checked: true
+        },
+        {
+            id: 2,
+            title: 'Guruh turlari',
+            descript: 'Guruh turlar ko‘rsatilsin',
+            checked: false
+        },
+        {
+            id: 3,
+            title: 'Shaxsiy turlari',
+            descript: 'Shaxsiy turlar ko‘rsatilsin',
+            checked: false
+        }
+    ],
+
 
     filters: {
         travelContinious: null,
@@ -99,6 +117,7 @@ export const state = () => ({
             travelEnd: null
         },
         travelType: {
+            all: false,
             personal: false,
             group: false
         },
@@ -219,6 +238,338 @@ export const state = () => ({
             title: 'Stands unpack by solutions pollination better clean beforehand ipsum clean. Competitors.',
             descript: 'Sandwich welcome message down globalize three customer welcome spaces. No-brainer moving first-order eod spaces next.',
             img: 'article4.png'
+        }
+    ],
+
+    famousTravels: [
+        {
+            id: 1,
+            title: 'Tog‘li o‘rmondagi kun',
+            country: 'Shvetsariya',
+            limit: '10 kun',
+            price: 680,
+            img: 'iceland16.png'
+        },
+        {
+            id: 2,
+            title: 'Tog‘li o‘rmondagi kun',
+            country: 'Shvetsariya',
+            limit: '10 kun',
+            price: 680,
+            img: 'famous1.png'
+        },
+        {
+            id: 3,
+            title: 'Tog‘li o‘rmondagi kun',
+            country: 'Shvetsariya',
+            limit: '10 kun',
+            price: 680,
+            img: 'iceland4.png'
+        },
+        {
+            id: 4,
+            title: 'Tog‘li o‘rmondagi kun',
+            country: 'Shvetsariya',
+            limit: '10 kun',
+            price: 680,
+            img: 'famous2.png'
+        },
+        {
+            id: 5,
+            title: 'Tog‘li o‘rmondagi kun',
+            country: 'Shvetsariya',
+            limit: '10 kun',
+            price: 680,
+            img: 'iceland10.png'
+        }
+    ],
+
+    moreRead: [
+        {
+            id: 1,
+            title: 'Win-win-win optimal viral bake donuts teeth including.',
+            descript: 'Respectively calculator slipstream uat eod tent tentative go next. Alarming winning muted centric caught first points.',
+            img: 'img2.png'
+        },
+        {
+            id: 2,
+            title: 'Put q1 cross nor shoot bed. Performance too deep reality.',
+            descript: 'Identify quarter optimal anomalies money. Helicopter put low banner will eco-system enable discussion close.',
+            img: 'img3.png'
+        },
+        {
+            id: 3,
+            title: 'Activities muted didn\'t pulling identify hanging. Hill customer.',
+            descript: 'Brainstorming right quick fastworks functional ensure economy watches boys. Lunch goto goto slipstream weaponize.',
+            img: 'img4.png'
+        },
+        {
+            id: 4,
+            title: 'Focus competitors ask hill box should discussion. Baseline pee.',
+            descript: 'Agile will blue initiative that\'s cob dangerous pretend invested. Territories message drive space charts / net.',
+            img: 'img7.png'
+        },
+        {
+            id: 5,
+            title: 'Cheap Egypt holiday to Cairo-Luxor-Aswan-Abu Simbel 11 Days with sleeping train',
+            descript: 'Respectively calculator slipstream uat eod tent tentative go next. Alarming winning muted centric caught first points.',
+            img: 'img6.png'
+        }
+    ],
+
+    photoGallery: [
+        {
+            id: 1,
+            galleryName: 'Mijozlarimiz rasmlari',
+            photoGallery: [
+                {
+                    id: 1,
+                    date: '22.02.2023',
+                    title: 'Win-win-win optimal viral bake donuts teeth including.',
+                    img: 'img1.png'
+                },
+                {
+                    id: 2,
+                    date: '22.02.2023',
+                    title: 'Moments overflow they turn at search first today. Focus.',
+                    img: 'img2.png'
+                },
+                {
+                    id: 3,
+                    date: '22.02.2023',
+                    title: 'Best fruit optimal last catching idea happenings. Churning these.',
+                    img: 'img3.png'
+                },
+                {
+                    id: 4,
+                    date: '22.02.2023',
+                    title: 'Going activities re-inventing inclusion only. Field we regroup.',
+                    img: 'img4.png'
+                },
+                {
+                    id: 5,
+                    date: '22.02.2023',
+                    title: 'Knowledge follow baseline let\'s search horse happenings.',
+                    img: 'img5.png'
+                },
+                {
+                    id: 6,
+                    date: '22.02.2023',
+                    title: 'Tentative streamline issues work hear old when nail rundown. Nor.',
+                    img: 'img6.png'
+                },
+                {
+                    id: 7,
+                    date: '22.02.2023',
+                    title: 'Better point paradigm ditching flesh clean boil pushback social.',
+                    img: 'img7.png'
+                },
+                {
+                    id: 8,
+                    date: '22.02.2023',
+                    title: 'Unit when hammer can churning. Should asserts we a deliverables.',
+                    img: 'img8.png'
+                },
+                {
+                    id: 9,
+                    date: '22.02.2023',
+                    title: 'Shift know also hear good invite social / spaces alarming social.',
+                    img: 'img9.png'
+                },
+                {
+                    id: 10,
+                    date: '22.02.2023',
+                    title: 'Gave moving support circle resources. Stop site productive.',
+                    img: 'img10.png'
+                },
+                {
+                    id: 11,
+                    date: '22.02.2023',
+                    title: 'Nor three line dog initiative. Eco-system catching tent only.',
+                    img: 'img11.png'
+                },
+                {
+                    id: 12,
+                    date: '22.02.2023',
+                    title: 'Dangerous we\'ve deep innovation be sky disband closer game.',
+                    img: 'img12.png'
+                }
+            ]
+        },
+        {
+            id: 2,
+            galleryName: 'Ichki turizm',
+            photoGallery: [
+                {
+                    id: 1,
+                    date: '22.02.2023',
+                    title: 'Win-win-win optimal viral bake donuts teeth including.',
+                    img: 'img10.png'
+                },
+                {
+                    id: 2,
+                    date: '22.02.2023',
+                    title: 'Moments overflow they turn at search first today. Focus.',
+                    img: 'img3.png'
+                },
+                {
+                    id: 3,
+                    date: '22.02.2023',
+                    title: 'Best fruit optimal last catching idea happenings. Churning these.',
+                    img: 'img1.png'
+                },
+                {
+                    id: 4,
+                    date: '22.02.2023',
+                    title: 'Going activities re-inventing inclusion only. Field we regroup.',
+                    img: 'img2.png'
+                },
+                {
+                    id: 5,
+                    date: '22.02.2023',
+                    title: 'Knowledge follow baseline let\'s search horse happenings.',
+                    img: 'img6.png'
+                },
+                {
+                    id: 6,
+                    date: '22.02.2023',
+                    title: 'Tentative streamline issues work hear old when nail rundown. Nor.',
+                    img: 'img8.png'
+                },
+                {
+                    id: 7,
+                    date: '22.02.2023',
+                    title: 'Better point paradigm ditching flesh clean boil pushback social.',
+                    img: 'img12.png'
+                },
+                {
+                    id: 8,
+                    date: '22.02.2023',
+                    title: 'Unit when hammer can churning. Should asserts we a deliverables.',
+                    img: 'img11.png'
+                },
+                {
+                    id: 9,
+                    date: '22.02.2023',
+                    title: 'Shift know also hear good invite social / spaces alarming social.',
+                    img: 'img5.png'
+                },
+                {
+                    id: 10,
+                    date: '22.02.2023',
+                    title: 'Gave moving support circle resources. Stop site productive.',
+                    img: 'img4.png'
+                },
+                {
+                    id: 11,
+                    date: '22.02.2023',
+                    title: 'Nor three line dog initiative. Eco-system catching tent only.',
+                    img: 'img1.png'
+                },
+                {
+                    id: 12,
+                    date: '22.02.2023',
+                    title: 'Dangerous we\'ve deep innovation be sky disband closer game.',
+                    img: 'img6.png'
+                }
+            ]
+        },
+        {
+            id: 3,
+            galleryName: 'Chet\'el turizmi',
+            photoGallery: [
+                {
+                    id: 1,
+                    date: '22.02.2023',
+                    title: 'Win-win-win optimal viral bake donuts teeth including.',
+                    img: 'img5.png'
+                },
+                {
+                    id: 2,
+                    date: '22.02.2023',
+                    title: 'Moments overflow they turn at search first today. Focus.',
+                    img: 'img1.png'
+                },
+                {
+                    id: 3,
+                    date: '22.02.2023',
+                    title: 'Best fruit optimal last catching idea happenings. Churning these.',
+                    img: 'img7.png'
+                },
+                {
+                    id: 4,
+                    date: '22.02.2023',
+                    title: 'Going activities re-inventing inclusion only. Field we regroup.',
+                    img: 'img3.png'
+                },
+                {
+                    id: 5,
+                    date: '22.02.2023',
+                    title: 'Knowledge follow baseline let\'s search horse happenings.',
+                    img: 'img12.png'
+                },
+                {
+                    id: 6,
+                    date: '22.02.2023',
+                    title: 'Tentative streamline issues work hear old when nail rundown. Nor.',
+                    img: 'img4.png'
+                },
+                {
+                    id: 7,
+                    date: '22.02.2023',
+                    title: 'Better point paradigm ditching flesh clean boil pushback social.',
+                    img: 'img7.png'
+                },
+                {
+                    id: 8,
+                    date: '22.02.2023',
+                    title: 'Unit when hammer can churning. Should asserts we a deliverables.',
+                    img: 'img10.png'
+                },
+                {
+                    id: 9,
+                    date: '22.02.2023',
+                    title: 'Shift know also hear good invite social / spaces alarming social.',
+                    img: 'img2.png'
+                },
+                {
+                    id: 10,
+                    date: '22.02.2023',
+                    title: 'Gave moving support circle resources. Stop site productive.',
+                    img: 'img11.png'
+                },
+                {
+                    id: 11,
+                    date: '22.02.2023',
+                    title: 'Nor three line dog initiative. Eco-system catching tent only.',
+                    img: 'img1.png'
+                },
+                {
+                    id: 12,
+                    date: '22.02.2023',
+                    title: 'Dangerous we\'ve deep innovation be sky disband closer game.',
+                    img: 'img6.png'
+                }
+            ]
+        }
+    ],
+
+    contacts: [
+        {
+            id: 1,
+            title: 'Manzil',
+            address: '87 Shahriobod ko\'chasi, Tashkent 100084',
+            location: '#'
+        },
+        {
+            id: 2,
+            title: 'Telefon',
+            phone: '+998 95 144-04-44'
+        },
+        {
+            id: 3,
+            title: 'Email',
+            mail: 'info@avantagetravel.com'
         }
     ]
 
