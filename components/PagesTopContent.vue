@@ -1,21 +1,35 @@
 <template>
     <div class="topContainer">
-        <a-row class="bgRow">
-            <img class="img-cov" :src="require('../static/images/pages/' + bgImg)" alt="">
+        <a-row v-if="innerPage === false">
+            <a-row class="bgRow">
+                <img class="img-cov" :src="require('../static/images/pages/' + bgImg)" alt="">
+            </a-row>
+            <a-row class="BreadRow dfc-cen">
+                <div>
+                    <a-breadcrumb separator=">">
+                        <a-breadcrumb-item>
+                            <nuxt-link class="commonP link" to="/">Asosiy sahifa</nuxt-link>
+                        </a-breadcrumb-item>
+                        <a-breadcrumb-item class="commonP">{{ pageName }}</a-breadcrumb-item>
+                    </a-breadcrumb>
+
+                </div>
+
+                <h3 class="commonT">{{ pageName }}</h3>
+
+            </a-row>
         </a-row>
-        <a-row class="BreadRow dfc-cen">
-            <div>
-                <a-breadcrumb separator=">">
-                    <a-breadcrumb-item>
-                        <nuxt-link class="commonP link" to="/">Asosiy sahifa</nuxt-link>
-                    </a-breadcrumb-item>
-                    <a-breadcrumb-item class="commonP">{{ pageName }}</a-breadcrumb-item>
-                </a-breadcrumb>
 
-            </div>
-
-            <h3 class="commonT">{{ pageName }}</h3>
-
+        <a-row v-else class="innerContent innerRow">
+            <a-breadcrumb separator=">">
+                <a-breadcrumb-item>
+                    <nuxt-link class="commonP link" to="/">Asosiy sahifa</nuxt-link>
+                </a-breadcrumb-item>
+                <a-breadcrumb-item>
+                    <nuxt-link class="commonP link" :to="`/${pageLink}`">{{ linkName }}</nuxt-link>
+                </a-breadcrumb-item>
+                <a-breadcrumb-item class="commonP">{{ pageName }}</a-breadcrumb-item>
+            </a-breadcrumb>
         </a-row>
     </div>
 </template>
@@ -30,6 +44,18 @@ export default {
         bgImg: {
             type: String,
             default: ''
+        },
+        innerPage: {
+            type: Boolean,
+            default: false
+        },
+        pageLink: {
+            type: String,
+            default: 'types'
+        },
+        linkName: {
+            type: String,
+            default: 'Types'
         }
     },
 }
@@ -39,29 +65,52 @@ export default {
     position: relative;
     height: 220px;
 
-    .BreadRow{
+    .ant-row{
+        height: 100%;
+    }
+
+    .innerRow{
+        margin-top: 24px;
+        
+        .commonP{
+            font-weight: 500;
+            color: #484848;
+
+            &.link {
+                font-weight: 400;
+                color: #898989;
+                opacity: 0.8;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .BreadRow {
         position: absolute;
-        top: calc(40% - 24px);
+        top: calc(10% - 24px);
         left: calc(40% - 24px);
 
-        h3.commonT{
+        h3.commonT {
             margin-top: 12px;
             color: #fff;
         }
 
-        .ant-breadcrumb-separator{
+        .ant-breadcrumb-separator {
             color: #fff;
         }
 
-        .commonP{
+        .commonP {
             color: #fff;
             font-weight: 500;
 
-            &.link{
+            &.link {
                 font-weight: 400;
                 opacity: 0.8;
 
-                &:hover{
+                &:hover {
                     opacity: 1;
                 }
             }
@@ -71,7 +120,7 @@ export default {
     .bgRow {
         height: 100%;
 
-        img{
+        img {
             height: 100%;
         }
 

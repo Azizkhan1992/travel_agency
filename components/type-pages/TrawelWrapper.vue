@@ -77,7 +77,7 @@
                     </a-col>
 
                     <a-col :span="7">
-                        <button class="travelB">Turni ko‘rish</button>
+                        <nuxt-link :to="`types/${place.id}`" class="travelB">Turni ko‘rish</nuxt-link>
                     </a-col>
                 </a-row>
             </a-col>
@@ -129,6 +129,12 @@ export default {
     display: flex;
     flex-direction: column;
     row-gap: 32px;
+
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .placesRow{
 

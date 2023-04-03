@@ -47,7 +47,7 @@
                             </p>
                         </div>
                         
-                        <a-month-picker  @change="onChange">
+                        <a-month-picker :getCalendarContainer="getCalendarContainer()"  @change="onChange"> 
                             <font-awesome-icon icon="fa-solid fa-chevron-down" />
                         </a-month-picker>
                     </div>
@@ -60,7 +60,8 @@
                 </a-col>
 
                 <a-col :xs="{ span: 24 }" :lg="{ span: 3 }" :xxl="{ span: 2 }" class="searchCol">
-                    <a-input-search />
+                    <!-- <a-input-search /> -->
+                    <font-awesome-icon :icon="['fas', 'magnifying-glass']" size="2x" />
                 </a-col>
             </a-row>
 
@@ -109,6 +110,11 @@ export default {
         }
     },
     methods: {
+        getCalendarContainer(){
+            return (triggerNode) => {
+                return triggerNode.parentNode.parentNode;
+            }
+        },
         onChange(date, dateString) {
             this.date = dateString;
         },
@@ -124,10 +130,10 @@ export default {
 </script>
 <style lang="scss">
 
-.ant-calendar-picker-container {
-    left: 480px !important;
-    top: 480px !important;
-}
+// .ant-calendar-picker-container {
+//     left: 480px !important;
+//     top: 480px !important;
+// }
 
 .headerLayout {
   height: 742px;
@@ -369,12 +375,14 @@ export default {
     .searchCol {
         height: 100px;
         border-radius: 80px;
-        padding: 12px 12px 0;
-        box-sizing: border-box;
         display: flex;
         align-items: center;
         justify-content: center;
         background: #0e5e6f;
+
+        svg{
+            cursor: pointer;
+        }
 
         .ant-input-suffix {
             position: static;
@@ -407,6 +415,92 @@ export default {
         align-items: center;
         justify-content: space-between;
         position: relative;
+
+        .ant-calendar-month-panel-body{
+
+            .ant-calendar-month-panel-cell{
+
+                &.ant-calendar-month-panel-selected-cell{
+                    a{
+                        background: #03A6A0;
+                    }
+                }
+                
+                a{
+                    width: calc(100% - 12px);
+                height: 46px;
+                border: 1px solid #e9e9e9;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+
+                &:hover{
+                    color: #03A6A0;
+                }
+                }
+            }
+        }
+
+        .ant-calendar-picker-container{
+            top: 112px !important;
+            left: 0 !important;
+
+            .ant-calendar-month-panel-header{
+                display: flex;
+                height: 60px;
+                align-items: center;
+                padding: 8px 4px;
+                box-sizing: border-box;
+
+                .ant-calendar-month-panel-year-select{
+                    margin-left: 8px;
+
+                    &:hover{
+                        span{
+                            color: #03A6A0;
+                        }
+                    }
+
+                    span{
+                        font-size: 1.35rem;
+                        line-height: 140%;
+                        font-weight: 500;
+
+                        &:hover{
+                            color: #03A6A0;
+                        }
+                    }
+                }
+
+                .ant-calendar-month-panel-prev-year-btn{
+                    left: initial;
+                    right: 52px !important;
+                }
+
+                .ant-calendar-month-panel-prev-year-btn, .ant-calendar-month-panel-next-year-btn{
+                    align-self: flex-end;
+                    top: 10px;
+                    width: 40px;
+                    height: 40px;
+                    background: #f2f2f2;
+                    border-radius: 12px;
+                    color: #03A6A0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &::before{
+                        left: initial;
+                        border-color: #03A6A0 !important;
+                    }
+
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
 
         .pickerItems {
             display: flex;
@@ -454,9 +548,9 @@ export default {
 }
 
 @media screen and (max-width: 1440px) and (min-width: 960px) {
-    .ant-calendar-picker-container{
-        left: 380px !important;
-    }
+    // .ant-calendar-picker-container{
+    //     left: 380px !important;
+    // }
     .offerItems {
         .offerTitle {
             span {

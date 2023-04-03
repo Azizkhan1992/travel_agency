@@ -119,6 +119,10 @@ export default {
         transition: 0.24s linear;
         z-index: 49;
 
+        .ant-row{
+            padding: 0;
+        }
+
         .items {
             padding: 12px;
             box-sizing: border-box;

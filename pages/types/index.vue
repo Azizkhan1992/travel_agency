@@ -10,11 +10,11 @@
     </div>
 </template>
 <script>
-import PagesHeaderLayout from '../layouts/PagesHeaderLayout.vue';
-import PagesTopContent from '../components/PagesTopContent.vue';
-import SearchInput from '../components/SearchInput.vue';
-import TypeContent from '../components/type-pages/TypeContent.vue';
-import MainFooterLayout from '../layouts/MainFooterLayout.vue';
+import PagesHeaderLayout from '../../layouts/PagesHeaderLayout.vue';
+import PagesTopContent from '../../components/PagesTopContent.vue';
+import SearchInput from '../../components/SearchInput.vue';
+import TypeContent from '../../components/type-pages/TypeContent.vue';
+import MainFooterLayout from '../../layouts/MainFooterLayout.vue';
 export default {
     name: 'app-types',
     components: {PagesHeaderLayout, PagesTopContent, SearchInput, TypeContent, MainFooterLayout}

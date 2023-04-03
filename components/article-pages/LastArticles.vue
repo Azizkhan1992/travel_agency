@@ -10,7 +10,7 @@
                 <a-row class="titleRow">
                     <h3 class="titleP">{{ article.title }}</h3>
                     <p class="miniP">{{ article.descript }}</p>
-                    <nuxt-link to="#" class="commonP">Batafsil
+                    <nuxt-link :to="`articles/${article.id}`" class="commonP">Batafsil
                         <font-awesome-icon :icon="['fass', 'angle-right']" />
                     </nuxt-link>
                 </a-row>

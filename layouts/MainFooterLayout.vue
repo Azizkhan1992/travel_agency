@@ -16,14 +16,14 @@
                 <a-col :lg="4" :xxl="3" class="companyCol col">
                     <h3>Kompaniya</h3>
 
-                    <nuxt-link to="#">Biz haqimizda</nuxt-link>
+                    <nuxt-link to="about-us">Biz haqimizda</nuxt-link>
 
                     <nuxt-link to="#">Bizning jamoa</nuxt-link>
                 </a-col>
                 <a-col :lg="4" :xxl="3" class="supportCol col">
                     <h3>Qo‘llab quvatlash</h3>
 
-                    <nuxt-link to="#">Biz bilan aloqa</nuxt-link>
+                    <nuxt-link to="contact">Biz bilan aloqa</nuxt-link>
 
                     <nuxt-link to="#">Yordam markazi</nuxt-link>
                 </a-col>

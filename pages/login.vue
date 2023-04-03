@@ -29,7 +29,7 @@
                 <span class="commonP">Avval ro‘yhatdan o‘tmaganmisiz?</span>
             </a-row>
             <a-row>
-                <a-button type="dashed" class="dBtn">
+                <a-button type="dashed" class="dBtn" @click="goToReg">
                     Ro‘yhatdan o‘tish
                 </a-button>
             </a-row>
@@ -72,6 +72,11 @@ export default {
         return{
             forgot: false,
             isPassword: false
+        }
+    },
+    methods: {
+        goToReg(){
+            this.$router.push({name: 'register'})
         }
     }
 }

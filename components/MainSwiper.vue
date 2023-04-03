@@ -20,11 +20,11 @@
             <img :src="require('../static/images/swipeImages/'+slide.img)" class="img-fluid w-100" blank="true">
 
             <h3 v-if="slide.name">{{ slide.name }}</h3>
-            <p>{{ slide.title }}</p>
-            <span>{{ slide.descript }}</span>
+            <p v-if="slide.title">{{ slide.title }}</p>
+            <span v-if="slide.descript">{{ slide.descript }}</span>
 
             <div class="more" v-if="isBtn">
-                <nuxt-link to="#">Batafsil</nuxt-link>
+                <nuxt-link :to="`articles/${slide.id}`">Batafsil</nuxt-link>
                 <font-awesome-icon :icon="['fas', 'chevron-right']" />
             </div>
             </swiper-slide>

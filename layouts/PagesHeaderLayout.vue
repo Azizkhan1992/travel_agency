@@ -23,7 +23,7 @@
                         <SelectLanguage :class="isLang ? 'open' : 'close'"/>
                     </a-col>
 
-                    <a-col :span="4" class="item user">
+                    <a-col :span="4" class="item user" @click="goToLogin">
                         <font-awesome-icon :icon="['fas', 'user']"  size="2x"/>
                     </a-col>
                 </a-row>
@@ -46,6 +46,9 @@ export default {
         open(){
             this.$store.commit('changeOpen')
         },
+        goToLogin(){
+            this.$router.push({name: 'login'})
+        }
     }
 }
 </script>
