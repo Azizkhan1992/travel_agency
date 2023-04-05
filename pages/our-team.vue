@@ -1,11 +1,11 @@
 <template>
-    <div class="ourTeamContainer">
+    <main class="ourTeamContainer">
         <PagesHeaderLayout/>
         <PagesTopContent :bg-img="'teamBg.png'" :page-name="'Bizning jamoa'"/>
         <OurTeam/>
         <TeamSupport/>
         <MainFooterLayout/>
-    </div>
+    </main>
 </template>
 <script>
 import PagesHeaderLayout from '../layouts/PagesHeaderLayout.vue';

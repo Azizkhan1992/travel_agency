@@ -1,5 +1,5 @@
 <template>
-    <div class="headerLayout">
+    <header class="headerLayout">
         <a-row class="maxW">
             <a-row type="flex" justify="space-between" align="middle">
                 <a-col :xs="{ span: 2 }" :lg="{ span: 4, offset: 1 }" class="ml-0">
@@ -70,7 +70,7 @@
                 <a-col>
                     <div class="offerItems">
                         <div class="offerTitle">
-                            <span>Biz bilan <i>Umra</i> Ibodatini ado eting</span>
+                            <h1>Biz bilan <i>Umra</i> Ibodatini ado eting</h1>
                         </div>
 
                         <div class="offerDescript">
@@ -87,7 +87,7 @@
                 </div>
             </a-row>
         </a-row>
-    </div>
+    </header>
 </template>
 <script>
 import Dropdown from '../components/Dropdown.vue';
@@ -300,12 +300,13 @@ export default {
             .offerTitle {
                 width: calc(55% - 12px);
 
-                span {
+                h1 {
                     display: inline-block;
                     font-size: 1.85rem;
                     font-weight: 500;
                     text-align: center;
                     text-transform: uppercase;
+                    color: #fff;
 
                     i {
                         font-style: normal;
@@ -314,6 +315,7 @@ export default {
                         line-height: 90px;
                         text-transform: uppercase;
                         color: #f9c81d;
+                        margin: 0;
                     }
                 }
             }
@@ -553,10 +555,10 @@ export default {
     // }
     .offerItems {
         .offerTitle {
-            span {
+            h1 {
                 font-size: 1.15rem !important;
 
-                i {
+                h3 {
                     font-size: 2.25rem !important;
                     line-height: 56px !important;
                 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="photoTabContainer common">
+    <section class="photoTabContainer common">
         <a-row class="tabRow">
             <a-tabs :default-active-key="1" @change="callback">
                 <a-tab-pane v-for="tab in photoTabs" :key="tab.id" :tab="tab.galleryName">
@@ -11,7 +11,7 @@
                             <a-row class="titleRow">
                                 <a-row><span class="miniP">{{ gallery.date }}</span></a-row>
                                 <a-row>
-                                    <p class="mainP">{{ gallery.title }}</p>
+                                    <h3 class="mainP">{{ gallery.title }}</h3>
                                 </a-row>
                                 <a-row>
                                     <nuxt-link to="#" class="commonP">Batafsil
@@ -26,7 +26,7 @@
                 </a-tab-pane>
             </a-tabs>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 export default {

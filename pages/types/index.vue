@@ -1,5 +1,5 @@
 <template>
-    <div class="typesContainer">
+    <main class="typesContainer">
         <PagesHeaderLayout/>
         <PagesTopContent :bgImg="'typeBg.png'" :pageName="'Turlar'"/>
         <SearchInput/>
@@ -7,7 +7,7 @@
         <hr class="common"/>
         <TypeContent/>
         <MainFooterLayout/>
-    </div>
+    </main>
 </template>
 <script>
 import PagesHeaderLayout from '../../layouts/PagesHeaderLayout.vue';

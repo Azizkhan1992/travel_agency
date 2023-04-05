@@ -1,6 +1,6 @@
 <template>
-    <div class="hotOffersContainer">
-        <h3 class="mainT">Eng qaynoq takliflar</h3>
+    <section class="hotOffersContainer">
+        <h2 class="mainT">Eng qaynoq takliflar</h2>
 
         <div class="hotCarouselContainer">
 
@@ -10,10 +10,10 @@
                     <img :src="require('../../static/images/' + slide.img)" class="img-fluid w-100" blank="true">
 
                     <div class="hotTitle">
-                        <p>{{ slide.name }}</p>
+                        <h3>{{ slide.name }}</h3>
 
                         <div class="addressWr">
-                            <span class="address">{{ slide.address + ' ' }}/</span>
+                            <p class="address">{{ slide.address + ' ' }}/</p>
                             <span class="limit">{{ slide.days }}</span>
                         </div>
 
@@ -34,10 +34,10 @@
                     <img :src="require('../../static/images/' + slide.img)" class="img-fluid w-100" blank="true">
 
                     <div class="hotTitle">
-                        <p>{{ slide.name }}</p>
+                        <h3>{{ slide.name }}</h3>
 
                         <div class="addressWr">
-                            <span class="address">{{ slide.address + ' ' }}/</span>
+                            <p class="address">{{ slide.address + ' ' }}/</p>
                             <span class="limit">{{ slide.days }}</span>
                         </div>
 
@@ -50,7 +50,7 @@
 
             </swiper>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -168,7 +168,7 @@ export default {
         margin-right: auto;
     }
 
-    h3 {
+    h2 {
         text-align: center;
     }
 
@@ -178,7 +178,7 @@ export default {
         margin-top: 48px;
 
         .swiper-container {
-            padding-bottom: 116px;
+            padding-bottom: 136px;
             box-sizing: border-box;
 
             .swiper-slide {
@@ -198,12 +198,14 @@ export default {
                     row-gap: 8px;
 
                     .addressWr {
+                        display: flex;
 
-                        span {
+                        p,span {
                             font-size: 1.15rem;
                             line-height: 21px;
                             font-weight: 400;
                             color: #898989;
+                            margin: 0;
                         }
                     }
 
@@ -227,7 +229,7 @@ export default {
                         }
                     }
 
-                    p {
+                    h3 {
                         margin: 0;
                         font-size: 1.35rem;
                         line-height: 26px;
@@ -246,9 +248,10 @@ export default {
             border-radius: 12px;
             background: #f2f2f2;
             top: 90% !important;
-            left: calc(40% - 12px);
+            left: calc(45% - 24px);
 
             &::after {
+                font-size: 1.5rem;
                 color: #027471;
             }
         }
@@ -259,9 +262,10 @@ export default {
             border-radius: 12px;
             background: #f2f2f2;
             top: 90%;
-            right: calc(40% - 12px);
+            right: calc(45% - 36px);
 
             &::after {
+                font-size: 1.5rem;
                 color: #027471;
             }
         }

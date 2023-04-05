@@ -1,8 +1,8 @@
 <template>
-    <div class="innerDescriptContainer common">
+    <section class="innerDescriptContainer common">
         <a-row class="innerContent">
             <a-row>
-                <h3>Barqarorlik rezolyutsiyalari 2023</h3>
+                <h3 class="title">Barqarorlik rezolyutsiyalari 2023</h3>
             </a-row>
             <a-row type="flex">
                 <a-col :span="5" class="col">
@@ -152,7 +152,7 @@
             <InnerSwiper :swipe-items="offerTypes" :play="true" :items="3"/>
         </a-row>
     </a-row>
-</div>
+    </section>
 </template>
 <script>
 import InnerSwiper from '../../InnerSwiper.vue'
@@ -195,6 +195,15 @@ export default {
 <style lang="scss">
 .innerDescriptContainer {
     margin-top: 16px;
+
+    .innerContent{
+        h3.title{
+            font-size: 2.85rem;
+            line-height: 140%;
+            font-weight: 500;
+            color: #212121;
+        }
+    }
 
     .swiperRow{
         margin-top: 120px;

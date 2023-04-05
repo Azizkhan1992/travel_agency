@@ -1,10 +1,10 @@
 <template>
-    <div class="contactContainer">
+    <main class="contactContainer">
         <PagesHeaderLayout/>
         <PagesTopContent :bg-img="'contactBg.png'" :page-name="'Biz bilan aloqa'"/>
         <ContactContainer/>
         <MainFooterLayout/>
-    </div>
+    </main>
 </template>
 <script>
 import PagesHeaderLayout from '../layouts/PagesHeaderLayout.vue'

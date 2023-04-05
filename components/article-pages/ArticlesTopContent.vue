@@ -1,5 +1,5 @@
 <template>
-    <div class="articlesTop">
+    <section class="articlesTop">
         <a-row class="breadRow">
             <a-breadcrumb separator=">">
                 <a-breadcrumb-item>
@@ -16,7 +16,7 @@
         <a-row class="swiperRow">
             <MainSwiper :swipe-items="topArticles" :items="1" :play="true" :paginate="true" :is-btn="true" />
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import MainSwiper from '../MainSwiper.vue';
@@ -59,6 +59,24 @@ export default {
 .articlesTop {
     height: 750px;
     position: relative;
+
+    .swiperRow{
+        .swiperContainer{
+
+            .swiper-slide{
+
+                h3{
+                    position: absolute;
+                    top: 60%;
+                    font-size: 2.5rem;
+                    line-height: 140%;
+                    font-weight: 500;
+                    color: #fff;
+                    z-index: 99;
+                }
+            }
+        }
+    }
 
     .divider {
         width: 100%;

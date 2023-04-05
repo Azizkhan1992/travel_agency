@@ -1,5 +1,5 @@
 <template>
-    <div class="mostReadContainer common">
+    <section class="mostReadContainer common">
         <h3 class="titleT">Eng ko‘p o‘qilgan maqolalar</h3>
 
         <a-row class="descRow">
@@ -8,7 +8,7 @@
         <a-row class="planshRow">
             <InnerSwiper :swipe-items="mostRead" :is-btn="true" :items="3"/>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import InnerSwiper from '../InnerSwiper.vue';

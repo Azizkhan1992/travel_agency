@@ -1,5 +1,5 @@
 <template>
-    <div class="contactWrapper common">
+    <section class="contactWrapper common">
         <a-row type="flex" justify="space-between">
             <a-col :span="6" v-for="contact in contacts" :key="contact.id" class="contactCol">
                 <a-row type="flex" justify="space-between" class="row">
@@ -29,7 +29,7 @@
                 <img :src="require('../../static/images/'+img.img)" alt="" v-for="img in humans" :key="img.id">
             </a-col>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 export default {

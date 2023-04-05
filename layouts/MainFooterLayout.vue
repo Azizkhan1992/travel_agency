@@ -1,5 +1,5 @@
 <template>
-    <div class="footerLayout">
+    <footer class="footerLayout">
         <div class="footerWrapper common">
             <a-row type="flex" justify="space-between" class="topRow">
                 <a-col :lg="6" :xxl="4" class="logoCol">
@@ -66,7 +66,7 @@
                 </a-col>
             </a-row>
         </div>
-    </div>
+    </footer>
 </template>
 <script>
 export default {

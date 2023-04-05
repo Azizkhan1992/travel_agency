@@ -1,11 +1,11 @@
 <template>
-    <div class="loginContainer">
+    <main class="loginContainer">
 
         <div class="headerWr">
             <PagesHeaderLayout />
         </div>
 
-        <div class="Wrapper login" v-if="forgot === false">
+        <section class="Wrapper login" v-if="forgot === false">
             <a-row>
                 <h3>Kirish</h3>
             </a-row>
@@ -33,7 +33,7 @@
                     Ro‘yhatdan o‘tish
                 </a-button>
             </a-row>
-        </div>
+        </section>
 
         <div class="Wrapper forgot" v-else-if="isPassword === false">
             <a-row>
@@ -61,7 +61,7 @@
                 <p class="mainP">Agar sizning elektron pochtangiz ma'lumotlar bazasida mavjud bo'lsa, siz qayta tiklash havolasini olasiz. Iltimos, elektron pochtangizni tekshiring va parolni tiklash uchun havolani bosing. Agar bu 5 daqiqadan ko'proq vaqt talab qilsa, keraksiz xatingizni tekshiring.</p>
             </a-row>
         </div>
-    </div>
+    </main>
 </template>
 <script>
 import PagesHeaderLayout from '../layouts/PagesHeaderLayout.vue';

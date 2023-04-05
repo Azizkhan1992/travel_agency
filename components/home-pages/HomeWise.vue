@@ -1,7 +1,7 @@
 <template>
-    <div class="wiseWordContainer common">
+    <section class="wiseWordContainer common">
         <MainSwiper :swipe-items="wiseItems" :items="1" :play="true"/>
-    </div>
+    </section>
 </template>
 <script>
 import MainSwiper from '../MainSwiper.vue';
@@ -61,7 +61,7 @@ export default {
                 align-items: center;
                 justify-content: center;
 
-                h3{
+                h3.name{
                     margin: 0;
                     font-size: 2.25rem;
                     line-height: 140%;
@@ -71,7 +71,7 @@ export default {
                     text-align: center;
                 }
 
-                p{
+                h3{
                     font-size: 1.5rem;
                     line-height: 150%;
                     font-weight: 400;

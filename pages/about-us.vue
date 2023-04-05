@@ -1,5 +1,5 @@
 <template>
-    <div class="aboutContainer">
+    <main class="aboutContainer">
         <PagesHeaderLayout/>
         <PagesTopContent :bg-img="'aboutBg.png'" :pageName="'Biz haqimizda'"/>
         <AboutUsTop/>
@@ -8,7 +8,7 @@
         <OfferTypes/>
         <MostReadable/>
         <MainFooterLayout/>
-    </div>
+    </main>
 </template>
 <script>
 import PagesHeaderLayout from '../layouts/PagesHeaderLayout.vue';

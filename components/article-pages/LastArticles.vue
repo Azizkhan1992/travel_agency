@@ -1,5 +1,5 @@
 <template>
-    <div class="lastArticlesContainer common">
+    <section class="lastArticlesContainer common">
         <h3 class="mainT">So‘nggi maqolalar</h3>
 
         <a-row class="articleRow" type="flex" justify="space-between">
@@ -19,7 +19,7 @@
         <a-row type="flex" justify="center" class="btnRow">
             <button class="travelBB">Ko‘proq ko‘rsatish</button>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 export default {

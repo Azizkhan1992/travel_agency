@@ -1,5 +1,5 @@
 <template>
-    <div class="supportContainer common">
+    <section class="supportContainer common">
         <a-row type="flex" justify="space-between">
             <a-col :lg="14" :xxl="14">
                 <h3>24/7 qo‘llab quvvatlash</h3>
@@ -11,7 +11,7 @@
                 <img :src="require('../../static/images/'+img.img)" alt="" v-for="img in humans" :key="img.id">
             </a-col>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 export default {

@@ -1,5 +1,5 @@
 <template>
-    <div class="directionContainer common">
+    <section class="directionContainer common">
         <h3>Avantage Group yo‘nalishlari</h3>
 
         <div class="directionWrapper">
@@ -26,7 +26,7 @@
                 </a-col>
             </a-row>
         </div>
-    </div>
+    </section>
 </template>
 <script>
 export default {

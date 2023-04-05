@@ -1,8 +1,8 @@
 <template>
-    <div class="checkPaymentContainer">
+    <main class="checkPaymentContainer">
         <PagesHeaderLayout />
 
-        <div class="common">
+        <section class="common">
             <a-row>
             <a-col :span="16">
                 <TravelBreadcrumb/>
@@ -20,10 +20,10 @@
                 <CheckTitle/>
             </a-col>
         </a-row>
-        </div>
+        </section>
 
         <MainFooterLayout/>
-    </div>
+    </main>
 </template>
 <script>
 import CheckTravellers from '../components/check-payment/CheckTravellers.vue';

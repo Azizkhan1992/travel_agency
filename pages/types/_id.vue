@@ -1,10 +1,10 @@
 <template>
-    <div class="innerTypeContainer">
+    <main class="innerTypeContainer">
         <PagesHeaderLayout/>
         
         <typeInnerContent/>
         <MainFooterLayout/>
-    </div>
+    </main>
 </template>
 <script>
 import PagesHeaderLayout from '../../layouts/PagesHeaderLayout.vue';

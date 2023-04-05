@@ -19,8 +19,8 @@
             >
             <img :src="require('../static/images/swipeImages/'+slide.img)" class="img-fluid w-100" blank="true">
 
-            <h3 v-if="slide.name">{{ slide.name }}</h3>
-            <p v-if="slide.title">{{ slide.title }}</p>
+            <h3 class="name" v-if="slide.name">{{ slide.name }}</h3>
+            <h3 v-if="slide.title">{{ slide.title }}</h3>
             <span v-if="slide.descript">{{ slide.descript }}</span>
 
             <div class="more" v-if="isBtn">

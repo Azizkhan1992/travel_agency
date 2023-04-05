@@ -1,5 +1,5 @@
 <template>
-    <div class="exactlyUsContainer">
+    <section class="exactlyUsContainer">
         <a-row class="bgRow">
 
         </a-row>
@@ -18,7 +18,7 @@
                 <InnerSwiper :swipe-items="swipeItems" :is-btn="true" :items="3"/>
             </a-row>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import InnerSwiper from '../InnerSwiper.vue';

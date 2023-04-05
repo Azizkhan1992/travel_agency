@@ -1,5 +1,5 @@
 <template>
-    <div class="teamSupportContainer">
+    <section class="teamSupportContainer">
         <div class="supportContainer common">
         <a-row type="flex" justify="space-between">
             <a-col :lg="14" :xxl="14">
@@ -13,7 +13,7 @@
             </a-col>
         </a-row>
     </div>
-    </div>
+    </section>
 </template>
 <script>
 export default {

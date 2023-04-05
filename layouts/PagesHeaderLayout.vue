@@ -1,5 +1,5 @@
 <template>
-    <div class="pagesHeaderContainer common">
+    <header class="pagesHeaderContainer common">
         <PageListModal :class="$store.state.isOpen ? 'open' : 'close'"/>
         <a-row type="flex" justify="space-between">
             <a-col :span="7">
@@ -30,7 +30,7 @@
                 </a-row>
             </a-col>
         </a-row>
-    </div>
+    </header>
 </template>
 <script>
 import PageListModal from '../components/modals/PageListModal.vue';

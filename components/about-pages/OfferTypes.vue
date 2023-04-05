@@ -1,5 +1,5 @@
 <template>
-    <div class="offerTypesContainer common">
+    <section class="offerTypesContainer common">
         <a-row class="titleRow">
             <h3 class="titleT">Taklif turlar</h3>
         </a-row>
@@ -11,7 +11,7 @@
         <a-row class="planshRow">
             <InnerSwiper :swipe-items="offerTypes" :items="3"/>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import InnerSwiper from '../InnerSwiper.vue';

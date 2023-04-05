@@ -1,5 +1,5 @@
 <template>
-    <div class="typeContent common">
+    <section class="typeContent common">
         <a-row type="flex" justify="space-between">
             <a-col :sm="8" :lg="7" :xxl="6" class="filterCol col">
                 <FilterContent/>
@@ -9,7 +9,7 @@
                 <TrawelWrapper/>
             </a-col>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import FilterContent from './FilterContent.vue';

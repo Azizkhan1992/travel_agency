@@ -1,5 +1,5 @@
 <template>
-    <div class="ourTeamWrapper mt-6">
+    <section class="ourTeamWrapper mt-6">
         <a-row class="titleRow common">
             <h3 class="titleT">About our team</h3>
             <span class="mainP"> Hammer container will involved disband when moments blue. Prioritize win-win-win hammer
@@ -34,7 +34,7 @@
                 </button>
             </a-col>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import InnerSwiper from '../InnerSwiper.vue';

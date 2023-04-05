@@ -1,5 +1,5 @@
 <template>
-    <div class="travelExpertsContainer common">
+    <section class="travelExpertsContainer common">
         <a-row type="flex" justify="center">
             <h3>Biz Sayohat bo'yicha ekspertmiz</h3>
             <span class="commonP">Have you ever rolled out of bed with excitement in your eyes ready to smash the day ahead?
@@ -11,7 +11,7 @@
         <a-row class="planshRow row">
             <InnerSwiper :swipe-items="experts" :items="3" :is-btn="true" :play="true" />
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import InnerSwiper from '../InnerSwiper.vue'

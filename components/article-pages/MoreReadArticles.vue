@@ -1,7 +1,7 @@
 <template>
-    <div class="moreReadContainer common">
+    <section class="moreReadContainer common">
         <a-row>
-            <h3 class="mainT">Eng ko‘p o‘qilgan</h3>
+            <h2 class="mainT">Eng ko‘p o‘qilgan</h2>
         </a-row>
         <a-row class="descSwipeRow swipe">
             <MainSwiper :swipe-items="articles" :is-btn="true" :play="true"/>
@@ -9,7 +9,7 @@
         <a-row class="mobileSwipeRow swipe">
             <MainSwiper :swipe-items="articles" :is-btn="true" :items="3" :play="true"/>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import MainSwiper from '../MainSwiper.vue';
@@ -81,7 +81,7 @@ export default {
                     flex-direction: column;
                     justify-content: space-between;
 
-                    p {
+                    h3 {
                         font-size: 1.35rem;
                         line-height: 140%;
                         font-weight: 500;
@@ -117,7 +117,7 @@ export default {
         }
     }
 
-    h3 {
+    h2 {
         text-align: center;
     }
 }

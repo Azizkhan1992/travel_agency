@@ -1,5 +1,5 @@
 <template>
-    <div class="typeInnerContainer common">
+    <section class="typeInnerContainer common">
         <a-row class="questionRow" v-if="question === true">
             <AskQuestionModal @closeQuestion="closeQuestion" />
         </a-row>
@@ -150,7 +150,7 @@
                 </a-row>
             </a-col>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import innerTypeHeader from './innerTypeHeader.vue';

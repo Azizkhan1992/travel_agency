@@ -1,5 +1,5 @@
 <template>
-    <div class="topContainer">
+    <section class="topContainer">
         <a-row v-if="innerPage === false">
             <a-row class="bgRow">
                 <img class="img-cov" :src="require('../static/images/pages/' + bgImg)" alt="">
@@ -31,7 +31,7 @@
                 <a-breadcrumb-item class="commonP">{{ pageName }}</a-breadcrumb-item>
             </a-breadcrumb>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 export default {

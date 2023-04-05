@@ -171,7 +171,7 @@ export default {
                 padding-right: 24px;
 
                 .swiper-button-prev{
-                left: calc(45% - 64px);
+                left: calc(45% - 36px);
             }
 
                 .swiper-slide{
@@ -218,7 +218,7 @@ export default {
 
             .swiper-button-next{
                 top: 92%;
-                right: calc(45% - 48px);
+                right: calc(45% - 24px);
 
                 &::after{
                     font-size: 1.5rem;

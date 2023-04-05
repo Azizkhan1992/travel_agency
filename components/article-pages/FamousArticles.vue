@@ -1,12 +1,12 @@
 <template>
-    <div class="famousArticlesContainer">
+    <section class="famousArticlesContainer">
         <a-row class="bgRow">
 
         </a-row>
 
         <a-row class="famousRow common">
             <a-row>
-                <h3 class="mainT">Eng mashxur turlar</h3>
+                <h2 class="mainT">Eng mashxur turlar</h2>
             </a-row>
             <a-row class="swipeRow swipe">
                 <swiper :slides-per-view="4" :space-between="30" :autoplay="true" loop :navigation="true"
@@ -50,7 +50,7 @@
                 </swiper>
             </a-row>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 import {
@@ -162,7 +162,7 @@ export default {
 
     .famousRow {
 
-        h3 {
+        h2 {
             margin-top: 40px;
             text-align: center;
             color: #fff;

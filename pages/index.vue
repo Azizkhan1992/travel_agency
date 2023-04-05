@@ -1,7 +1,7 @@
 <template>
-  <div class="mainContainer">
+  <main class="mainContainer">
     <MainHeaderLayout />
-    <div class="homeContent">
+    <section class="homeContent">
       <PageListModal :class="$store.state.isOpen ? 'open' : 'close'"/>
       <HotOffers />
       <GreatLeisure />
@@ -9,9 +9,9 @@
       <HomeWise />
       <HomeSupport/>
       <HomeDirection/>
-    </div>
+    </section>
     <MainFooterLayout />
-  </div>
+  </main>
 </template>
 
 <script>

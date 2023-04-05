@@ -1,5 +1,5 @@
 <template>
-    <div class="advantageContainer common">
+    <section class="advantageContainer common">
         <h3>Bizning afzalliklarimiz</h3>
         <a-row type="flex" justify="space-between">
             <a-col v-for="item in advantages" :key="item.id" :span="3">
@@ -7,7 +7,7 @@
                 <p>{{ item.name }}</p>
             </a-col>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 export default {

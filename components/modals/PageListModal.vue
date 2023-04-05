@@ -1,5 +1,5 @@
 <template>
-    <div class="pageListContainer">
+    <section class="pageListContainer">
         <div class="pageListWrapper">
             <div class="listItems"> 
                 <a-row>
@@ -48,7 +48,7 @@
                 </a-row>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 <script>
 export default {

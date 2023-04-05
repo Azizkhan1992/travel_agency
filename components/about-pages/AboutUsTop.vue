@@ -1,5 +1,5 @@
 <template>
-    <div class="usTopContainer mt-6 common">
+    <section class="usTopContainer mt-6 common">
         <a-row type="flex" justify="space-between">
             <a-col :span="12">
                 <h3>22 yil davomida biz siz bilan sayohat qilishni yaxshi ko'ramiz!</h3>
@@ -48,7 +48,7 @@
                 </a-row>
             </a-col>
         </a-row>
-    </div>
+    </section>
 </template>
 <script>
 export default {

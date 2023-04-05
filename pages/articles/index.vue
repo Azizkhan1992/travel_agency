@@ -1,12 +1,12 @@
 <template>
-    <div class="articlesPage">
+    <main class="articlesPage">
         <PagesHeaderLayout/>
         <ArticlesTopContent/>
         <LastArticles/>
         <FamousArticles/>
         <MoreReadArticles/>
         <MainFooterLayout/>
-    </div>
+    </main>
 </template>
 <script>
 import PagesHeaderLayout from '../../layouts/PagesHeaderLayout.vue';

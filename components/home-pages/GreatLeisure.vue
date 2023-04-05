@@ -1,5 +1,5 @@
 <template>
-    <div class="leisureContainer">
+    <section class="leisureContainer">
         <div class="leisureBg"></div>
         <div class="leisureWrapper common">
             <MainSwiper :swipe-items="leisureItems" :is-btn="true" :play="true"/>
@@ -8,7 +8,7 @@
         <div class="leisurePlansh common">
             <MainSwiper :swipe-items="leisureItems" :is-btn="true" :items="3" :play="true"/>
         </div>
-    </div>
+    </section>
 </template>
 <script>
 import MainSwiper from '../MainSwiper.vue';
@@ -119,7 +119,7 @@ export default {
                 }
             }
 
-            p{
+            h3{
                 font-size: 1.35rem !important;
                 line-height: 140%;
                 font-weight: 500;
@@ -153,7 +153,7 @@ export default {
                     display: none;
                 }
 
-                p {
+                h3 {
                     font-size: 2.25rem;
                     line-height: 140%;
                     font-weight: 500;
@@ -180,7 +180,7 @@ export default {
                     display: none;
                 }
 
-                p {
+                h3 {
                     font-size: 2.25rem !important;
                     line-height: 140%;
                     font-weight: 500;
@@ -238,7 +238,7 @@ export default {
                 .swiper-slide{
                     height: 380px;
 
-                    p{
+                    h3{
                         font-size: 1rem !important;
                     }
 
@@ -248,7 +248,7 @@ export default {
 
                     &.swiper-slide-active, &.swiper-slide-prev{
 
-                        p{
+                        h3{
                             font-size: 1.35rem !important;
                         }
 

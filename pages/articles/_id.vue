@@ -1,10 +1,10 @@
 <template>
-    <div class="articleInnerContainer innerP">
+    <main class="articleInnerContainer innerP">
         <PagesHeaderLayout/>
         <PagesTopContent :inner-page="true" :page-link="'articles'" :link-name="'Articles'" :page-name="'Barqarorlik rezolyutsiyalari 2023'"/>
         <InnerDescripts/>
         <MainFooterLayout/>
-    </div>
+    </main>
 </template>
 <script>
 import PagesHeaderLayout from '../../layouts/PagesHeaderLayout.vue';

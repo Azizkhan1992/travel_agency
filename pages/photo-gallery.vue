@@ -1,10 +1,10 @@
 <template>
-    <div class="photoGalleryContainer">
+    <main class="photoGalleryContainer">
         <PagesHeaderLayout/>
         <PagesTopContent :bgImg="'photoBg.png'" :pageName="'Fotogalereya'"/>
         <PhotosTabbar/>
         <MainFooterLayout/>
-    </div>
+    </main>
 </template>
 <script>
 import PagesTopContent from '../components/PagesTopContent.vue'
