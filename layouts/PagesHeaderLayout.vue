@@ -2,7 +2,7 @@
     <div class="pagesHeaderContainer common">
         <PageListModal :class="$store.state.isOpen ? 'open' : 'close'"/>
         <a-row type="flex" justify="space-between">
-            <a-col :span="4">
+            <a-col :span="7">
                 <font-awesome-icon :icon="['fas', 'bars']" size="3x" class="open" @click="open"/>
             </a-col>
 
@@ -12,9 +12,10 @@
                 </nuxt-link>
             </a-col>
 
-            <a-col :span="5" class="itemsCol">
-                <a-row type="flex" justify="space-between">
-                    <a-col :span="4" class="item search">
+            <a-col :span="9" class="itemsCol">
+                <a-row type="flex" justify="space-between" class="ItemsRow">
+                    <a-col class="item search" @mouseover="isSearch = true" @mouseleave="isSearch = false" :class="isSearch ? 'active' : 'deactive'">
+                        <a-input placeholder="Izlang" class="searchI" :class="isSearch ? 'open' : 'close'" />
                         <font-awesome-icon :icon="['fas', 'magnifying-glass']" size="2x"/>
                     </a-col>
 
@@ -39,7 +40,8 @@ export default {
     components: {PageListModal, SelectLanguage},
     data(){
         return{
-            isLang: false
+            isLang: false,
+            isSearch: false
         }
     },
     methods: {
@@ -63,6 +65,13 @@ export default {
 
         .itemsCol{
 
+            .ItemsRow{
+                justify-content: flex-end;
+                column-gap: 16px;
+
+                
+            }
+
             .item{
                 width: 56px;
                 height: 56px;
@@ -72,6 +81,31 @@ export default {
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+
+                &.active{
+                    width: fit-content;
+                    max-width: 146px;
+                    padding: 0 8px;
+                    box-sizing: border-box;
+                    column-gap: 4px;
+                }
+
+                .searchI{
+                    transform-origin: right;
+                    transition: 0.24s linear;
+                    background: rgba(242, 242, 242, 0.2);
+                    border-radius: 12px;
+                    height: 42px;
+
+                    &.close{
+                        display: none;
+                        transform: scaleX(0);
+                    }
+
+                    &.open{
+                        transform: scaleX(1);
+                    }
+                }
             }
         }
 

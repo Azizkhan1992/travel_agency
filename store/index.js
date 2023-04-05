@@ -307,7 +307,7 @@ export const state = () => ({
             id: 4,
             title: 'Focus competitors ask hill box should discussion. Baseline pee.',
             descript: 'Agile will blue initiative that\'s cob dangerous pretend invested. Territories message drive space charts / net.',
-            img: 'img7.png'
+            img: 'img8.png'
         },
         {
             id: 5,
@@ -570,6 +570,77 @@ export const state = () => ({
             id: 3,
             title: 'Email',
             mail: 'info@avantagetravel.com'
+        }
+    ],
+    offerTypes: [
+        {
+            id: 1,
+            title: 'Tog‘li o‘rmondagi kun',
+            country: 'Shvetsariya',
+            limit: '10 kun',
+            sale: 20,
+            oldPrice: 741,
+            price: 680,
+            img: 'img9.png'
+        },
+        {
+            id: 2,
+            title: 'Fonusli osmon',
+            country: 'Kalmar',
+            limit: '7 kun',
+            price: 410,
+            img: 'img10.png'
+        },
+        {
+            id: 3,
+            title: 'Shimol yog‘dusi',
+            country: 'Alaska',
+            limit: '5 kun',
+            price: '2 500',
+            img: 'img11.png'
+        },
+        {
+            id: 4,
+            title: 'Kalimangarudagi hafta',
+            country: 'Xitoy',
+            limit: '7 kun',
+            sale: 20,
+            oldPrice: 910,
+            price: 890,
+            img: 'img12.png'
+        }
+    ],
+
+    ourTeam: [
+        {
+            id: 1,
+            title: 'Abdullayev Ravshan',
+            descript: 'Заместитель главного менеджера',
+            img: 'team4.jpg'
+        },
+        {
+            id: 2,
+            title: 'Tursunxodjayev Uyg‘unxo‘ja',
+            descript: 'Главный менеджер',
+            img: 'team1.png'
+        },
+        {
+            id: 3,
+            title: 'Tursunxodjayev Mexmonxo‘ja',
+            descript: 'Заместитель главного менеджера',
+            img: 'team2.png'
+        },
+        {
+            id: 4,
+            title: 'Rahmonov Farrux',
+            descript: 'Главный бухгалтер',
+            img: 'team3.png'
+        },
+        {
+            id: 5,
+            title: 'Tursunxodjayeva Fotima',
+            descript: 'Начальник отдела',
+            img: 'team4.jpg'
         }
     ]
 

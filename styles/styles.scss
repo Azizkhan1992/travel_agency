@@ -56,6 +56,45 @@ body {
     justify-content: center;
 }
 
+.mainInp{
+    width: 100%;
+    height: 64px;
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 8px;
+
+    &:hover{
+        border: 1px solid #03a39d;
+    }
+
+    &:focus{
+        outline: none;
+        border-color: #03a39d;
+        box-shadow: 0 0 0 1px rgba(24, 255, 144, 0.2);
+    }
+}
+
+.backGP{
+    width: 44px;
+    height: 44px;
+    background: #03a39d;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+
+.titleT{
+    font-size: 2.5rem;
+    line-height: 46px;
+    font-weight: 500;
+    text-align: center;
+    color: #212121;
+    margin: 0;
+}
+
 .mainT{
     font-size: 2.25rem;
     font-weight: 500;
@@ -191,6 +230,10 @@ body {
     }
   .common{
     width: 920px !important;
+  }
+
+  .mainInp{
+    height: 48px;
   }
 
   .innerContent{

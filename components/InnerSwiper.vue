@@ -3,7 +3,7 @@
         <a-row v-if="isBtn">
             <swiper
             :slides-per-view="items"
-            :space-between="30"
+            :space-between="space"
             :autoplay="play"
             loop
             :navigation="true"
@@ -120,6 +120,10 @@ export default {
         paginate: {
             type: Boolean,
             default: false
+        },
+        space: {
+            type: [String, Number],
+            default: 30
         }
     },
     methods: {

@@ -187,44 +187,7 @@ export default {
                     img: 'img8.png'
                 }
             ],
-            offerTypes: [
-                {
-                    id: 1,
-                    title: 'Tog‘li o‘rmondagi kun',
-                    country: 'Shvetsariya',
-                    limit: '10 kun',
-                    sale: 20,
-                    oldPrice: 741,
-                    price: 680,
-                    img: 'img9.png'
-                },
-                {
-                    id: 2,
-                    title: 'Fonusli osmon',
-                    country: 'Kalmar',
-                    limit: '7 kun',
-                    price: 410,
-                    img: 'img10.png'
-                },
-                {
-                    id: 3,
-                    title: 'Shimol yog‘dusi',
-                    country: 'Alaska',
-                    limit: '5 kun',
-                    price: '2 500',
-                    img: 'img11.png'
-                },
-                {
-                    id: 4,
-                    title: 'Kalimangarudagi hafta',
-                    country: 'Xitoy',
-                    limit: '7 kun',
-                    sale: 20,
-                    oldPrice: 910,
-                    price: 890,
-                    img: 'img12.png'
-                }
-            ]
+            offerTypes: this.$store.state.offerTypes
         }
     }
 }

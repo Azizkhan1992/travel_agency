@@ -18,7 +18,7 @@
 
                     <nuxt-link to="about-us">Biz haqimizda</nuxt-link>
 
-                    <nuxt-link to="#">Bizning jamoa</nuxt-link>
+                    <nuxt-link to="our-team">Bizning jamoa</nuxt-link>
                 </a-col>
                 <a-col :lg="4" :xxl="3" class="supportCol col">
                     <h3>Qo‘llab quvatlash</h3>
