@@ -1,6 +1,6 @@
 <template>
     <section class="hotOffersContainer">
-        <h2 class="mainT">Eng qaynoq takliflar</h2>
+        <h2 class="mainT">{{ $t('hot_offers') }}</h2>
 
         <div class="hotCarouselContainer">
 
@@ -10,11 +10,11 @@
                     <img :src="require('../../static/images/' + slide.img)" class="img-fluid w-100" blank="true">
 
                     <div class="hotTitle">
-                        <h3>{{ slide.name }}</h3>
+                        <h3>{{ slide.name?.[$i18n.locale] }}</h3>
 
                         <div class="addressWr">
-                            <p class="address">{{ slide.address + ' ' }}/</p>
-                            <span class="limit">{{ slide.days }}</span>
+                            <p class="address">{{ slide.address?.[$i18n.locale] + ' ' }}/</p>
+                            <span class="limit">{{ slide.days+ $t('day') }}</span>
                         </div>
 
                         <div class="priceWr">
@@ -34,11 +34,35 @@
                     <img :src="require('../../static/images/' + slide.img)" class="img-fluid w-100" blank="true">
 
                     <div class="hotTitle">
-                        <h3>{{ slide.name }}</h3>
+                        <h3>{{ slide.name?.[$i18n.locale] }}</h3>
 
                         <div class="addressWr">
-                            <p class="address">{{ slide.address + ' ' }}/</p>
-                            <span class="limit">{{ slide.days }}</span>
+                            <p class="address">{{ slide.address?.[$i18n.locale] + ' ' }}/</p>
+                            <span class="limit">{{ slide.days + ' ' + $t('day') }}</span>
+                        </div>
+
+                        <div class="priceWr">
+                            <span class="oldPrice" v-if="slide.oldPrice">{{ slide.oldPrice }}$</span>
+                            <span class="price">{{ slide.price }}$</span>
+                        </div>
+                    </div>
+                </swiper-slide>
+
+            </swiper>
+        </div>
+
+        <div class="hot_mobile_carousel">
+            <swiper :slides-per-view="1" :space-between="30" :autoplay="true" loop :navigation="true" @swiper="onSwiper"
+                @slideChange="onSlideChange" ref="swiperTag">
+                <swiper-slide v-for="slide in slideItems" :key="slide.id" class="test" :class="{ test_2: true }">
+                    <img :src="require('../../static/images/' + slide.img)" class="img-fluid w-100" blank="true">
+
+                    <div class="hotTitle">
+                        <h3>{{ slide.name?.[$i18n.locale] }}</h3>
+
+                        <div class="addressWr">
+                            <p class="address">{{ slide.address?.[$i18n.locale] + ' ' }}/</p>
+                            <span class="limit">{{ slide.days+ $t('day') }}</span>
                         </div>
 
                         <div class="priceWr">
@@ -81,9 +105,17 @@ export default {
         return {
             slideItems: [{
                 id: 1,
-                name: 'Tog‘li o‘rmondagi kun',
-                address: 'Shvetsariya',
-                days: '10 kun',
+                name: {
+                    uz: 'Tog‘li o‘rmondagi kun',
+                    en: 'A day in the mountain forest',
+                    ru: 'День в горном лесу'
+                },
+                address: {
+                    uz: 'Shvetsariya',
+                    ru: 'Швейцария',
+                    en: 'Switzerland'
+                },
+                days: 10,
                 oldPrice: '741'
                 ,
                 price: '680'
@@ -93,9 +125,17 @@ export default {
             },
             {
                 id: 2,
-                name: 'Fonusli osmon',
-                address: 'Kalmar',
-                days: '7 kun',
+                name: {
+                    uz: 'Fonusli osmon',
+                    ru: 'Небо с фонарями',
+                    en: 'Sky with lanterns'
+                },
+                address: {
+                    uz: 'Kalmar',
+                    en: 'Squid',
+                    ru: 'Кальмар'
+                },
+                days: 7,
                 price: '410'
                 ,
                 sale: false,
@@ -103,9 +143,17 @@ export default {
             },
             {
                 id: 3,
-                name: 'Shimol yog‘dusi',
-                address: 'Alaska',
-                days: '5 kun',
+                name: {
+                    uz: 'Shimol yog‘dusi',
+                    en: 'Northern lights',
+                    ru: 'Северное сияние'
+                },
+                address: {
+                    uz: 'Alyaska',
+                    en: 'Alaska',
+                    ru: 'Аляска'
+                },
+                days: 5,
                 price: '2 500'
                 ,
                 sale: false,
@@ -113,9 +161,17 @@ export default {
             },
             {
                 id: 4,
-                name: 'Kalimangarudagi hafta',
-                address: 'Xitoy',
-                days: '7 kun',
+                name: {
+                    uz: 'Kalimangarudagi hafta',
+                    en: 'A week in Kalimangaru',
+                    ru: 'Неделя в Калимангару'
+                },
+                address: {
+                    uz: 'Xitoy',
+                    ru: 'Китай',
+                    en: 'China'
+                },
+                days: 7,
                 oldPrice: '910'
                 ,
                 price: '890'
@@ -146,6 +202,10 @@ export default {
     margin: 0 auto;
 
     .hotPlanshCarousel {
+        display: none;
+    }
+
+    .hot_mobile_carousel{
         display: none;
     }
 
@@ -312,7 +372,7 @@ export default {
 
 }
 
-@media screen and (max-width: 1440px) and (min-width: 960px) {
+@media screen and (max-width: 1560px) and (min-width: 960px) {
     .hotOffersContainer {
         width: 920px !important;
 
@@ -415,6 +475,123 @@ export default {
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .hotOffersContainer{
+        width: calc(100% - 24px);
+
+        .hot_mobile_carousel{
+            display: block;
+            margin-top: 40px;
+            width: 100%;
+            height: 740px;
+
+            .swiper-container{
+                height: 100%;
+                padding-bottom: 96px;
+                box-sizing: border-box;
+
+                .swiper-button-prev{
+                    top: 95%;
+                    left: calc(45% - 36px);
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 12px;
+                    background: #f2f2f2;
+                    color: #03a6a0;
+
+
+                    &::after{
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .swiper-button-next{
+                    top: 95%;
+                    right: calc(45% - 36px);
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 12px;
+                    background: #f2f2f2;
+                    color: #03a6a0;
+
+                    &::after{
+                        font-size: 1.5rem;
+                    }
+                }
+
+                .swiper-slide{
+                    position: relative;
+
+                    .hotTitle{
+                        position: absolute;
+                        left: 12px;
+                        bottom: 12px;
+                        right: 12px;
+                        background: #fff;
+                        padding: 12px;
+                        box-sizing: border-box;
+                        border-radius: 12px;
+
+                        h3{
+                            font-size: 1.5rem;
+                            line-height: 140%;
+                            font-weight: 500;
+                            color: #212121;
+                            margin-bottom: 48px;
+                        }
+
+                        .addressWr{
+                            display: flex;
+
+                            p, span{
+                                font-size: 0.85rem;
+                                line-height: 140%;
+                                font-weight: 400;
+                                color: #898989;
+                            }
+                        }
+
+                        .priceWr{
+                            display: flex;
+                            align-items: center;
+                            column-gap: 8px;
+                            span{
+                                font-size: 1.15rem;
+                                line-height: 140%;
+                                font-weight: 400;
+                            }
+
+                            .price{
+                                color: #03a6a0;
+                            }
+
+                            .oldPrice{
+                                color: #898989;
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 16px;
+                    }
+                }
+            }
+        }
+
+        .hotCarouselContainer{
+            display: none;
+        }
+
+        .hotPlanshCarousel{
+            display: none;
         }
     }
 }

@@ -91,20 +91,44 @@ export const state = () => ({
     travelTypes: [
         {
             id: 1,
-            title: 'Barcha turlar',
-            descript: 'Barcha turlar ko‘rsatilsin',
+            title: {
+                uz: 'Barcha turlar',
+                ru: 'Все виды',
+                en: 'All species'
+            },
+            descript: {
+                uz: 'Barcha turlar ko‘rsatilsin',
+                en: 'Show all types',
+                ru: 'Показать все типы'
+            },
             checked: true
         },
         {
             id: 2,
-            title: 'Guruh turlari',
-            descript: 'Guruh turlar ko‘rsatilsin',
+            title: {
+                uz: 'Guruh turlari',
+                ru: 'Типы групп',
+                en: 'Group types'
+            },
+            descript: {
+                uz: 'Guruh turlar ko‘rsatilsin',
+                en: 'Show a group of species',
+                ru: 'Показать группу видов'
+            },
             checked: false
         },
         {
             id: 3,
-            title: 'Shaxsiy turlari',
-            descript: 'Shaxsiy turlar ko‘rsatilsin',
+            title: {
+                uz: 'Shaxsiy turlari',
+                ru: 'Персональные типы',
+                en: 'Personal types'
+            },
+            descript: {
+                uz: 'Shaxsiy turlar ko‘rsatilsin',
+                en: 'Show individual types',
+                ru: 'Показать отдельные типы'
+            },
             checked: false
         }
     ],

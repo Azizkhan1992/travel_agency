@@ -4,13 +4,15 @@
             <a-row>
                 <p class="mainP">Tillar</p>
             </a-row>
-            <a-row type="flex" justify="space-between" v-for="lang in languages" :key="lang.id">
-                <a-col :span="14">
-                    <img :src="require('../static/images/'+lang.img)" alt="">
+            <a-row type="flex" justify="space-between" v-for="(lang, idx) in languages" :key="idx">
+                <a-col :span="14" @click.prevent.stop="$i18n.setLocale(lang.code)">
+                    <img v-if="lang.name === 'O\'zbek'" src="../static/images/uzb.png" alt="">
+                    <img v-if="lang.name === 'English'" src="../static/images/eng.png" alt="">
+                    <img v-if="lang.name === 'Русский'" src="../static/images/rus.png" alt="">
                     <span class="commonP">{{ lang.name }}</span>
                 </a-col>
                 <a-col>
-                    <font-awesome-icon v-if="lang.checked" :icon="['fas', 'check']" />
+                    <font-awesome-icon v-if="$i18n.locale == lang.code" :icon="['fas', 'check']" />
                 </a-col>
             </a-row>
         </a-row>
@@ -19,34 +21,19 @@
 <script>
 export default {
     name: 'app-lang',
-    data(){
-        return{
-            languages: [
-        {
-            id:1,
-            name: 'O‘zbek',
-            img: 'uzb.png',
-            checked: true
-        },
-        {
-            id: 2,
-            name: 'Русскый',
-            img: 'rus.png',
-            checked: false
-        },
-        {
-            id: 3,
-            name: 'English',
-            img: 'eng.png',
-            checked: false
+    data() {
+        return {
         }
-    ]
+    },
+    computed: {
+        languages() {
+            return this.$i18n.locales
         }
     }
 }
 </script>
 <style lang="scss">
-.languageContainer{
+.languageContainer {
     width: 260px;
     height: 210px;
     background: #fff;
@@ -60,37 +47,38 @@ export default {
     transform-origin: top;
     transition: 0.24s linear;
 
-    &.close{
+    &.close {
         transform: scaleY(0);
     }
 
-    &.open{
+    &.open {
         transform: scaleY(1);
     }
 
-    .langRow{
+    .langRow {
         height: 100%;
         padding: 0 !important;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        span.commonP{
+        span.commonP {
             color: #565656;
         }
 
-        .ant-col{
+        .ant-col {
             cursor: pointer;
-            svg{
+
+            svg {
                 color: #03a6a0;
             }
         }
 
-        img{
+        img {
             margin-right: 12px;
         }
 
-        .ant-row{
+        .ant-row {
             padding: 0;
         }
     }

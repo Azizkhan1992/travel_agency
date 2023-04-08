@@ -1,13 +1,13 @@
 <template>
     <section class="directionContainer common">
-        <h3>Avantage Group yo‘nalishlari</h3>
+        <h3>{{ $t('direction_title') }}</h3>
 
         <div class="directionWrapper">
             <a-row type="flex" justify="space-between">
                 <a-col :span="11" class="eventCol">
                     <div class="eventItems">
                         <div class="colLeft">
-                        <span>Avantage Events</span>
+                        <span>{{ $t('direction_event') }}</span>
                         <font-awesome-icon :icon="['fas', 'arrow-right']" />
                     </div>
 
@@ -17,7 +17,7 @@
                 <a-col :span="11" class="graphicCol">
                     <div class="graphicItems">
                         <div class="colLeft">
-                        <span>Avantage Graphic</span>
+                        <span>{{ $t('direction_graphic') }}</span>
                         <font-awesome-icon :icon="['fas', 'arrow-right']" />
                     </div>
 
@@ -158,7 +158,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1440px) and (min-width: 960px) {
+@media screen and (max-width: 1560px) and (min-width: 960px) {
     .directionContainer{
 
         .directionWrapper{
@@ -195,6 +195,31 @@ export default {
                         span{
                             font-size: 1rem !important;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .directionContainer{
+
+        .directionWrapper{
+            
+            .ant-row-flex{
+                flex-direction: column;
+                row-gap: 24px;
+
+                .eventCol, .graphicCol{
+                    width: 100%;
+
+                    span{
+                        font-size: 1.15rem !important;
+                    }
+
+                    img{
+                        max-width: 170px;
                     }
                 }
             }

@@ -19,12 +19,12 @@
             >
             <img :src="require('../static/images/swipeImages/'+slide.img)" class="img-fluid w-100" blank="true">
 
-            <h3 class="name" v-if="slide.name">{{ slide.name }}</h3>
-            <h3 v-if="slide.title">{{ slide.title }}</h3>
-            <span v-if="slide.descript">{{ slide.descript }}</span>
+            <h3 class="name" v-if="slide.name">{{ slide.name?.[$i18n.locale] }}</h3>
+            <h3 v-if="slide.title">{{ slide.title?.[$i18n.locale] }}</h3>
+            <span v-if="slide.descript">{{ slide.descript?.[$i18n.locale] }}</span>
 
             <div class="more" v-if="isBtn">
-                <nuxt-link :to="`articles/${slide.id}`">Batafsil</nuxt-link>
+                <nuxt-link :to="`articles/${slide.id}`">{{ $t('more') }}</nuxt-link>
                 <font-awesome-icon :icon="['fas', 'chevron-right']" />
             </div>
             </swiper-slide>

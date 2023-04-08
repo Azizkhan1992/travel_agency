@@ -11,7 +11,7 @@
                     </div>
                 </a-col>
                 <a-col :xs="{ span: 8 }" :lg="{ span: 6 }" class="topIcons">
-                    <div class="languages icons" @click="isLang = !isLang">
+                    <div class="languages icons" @mouseover="isLang = true" @mouseleave="isLang = false">
                         <img src="../static/images/world.png" alt="">
                         <SelectLanguage :class="isLang ? 'open' : 'close'"/>
 
@@ -24,10 +24,10 @@
             <a-row class="title-row">
                 <a-col class="headerTitle">
                     <h1 class="commonT">
-                        Siz orzu qiling, biz amalga oshiramiz.
+                        {{ $t('home_title') }}
                     </h1>
                     <p class="commonP">
-                        Qayerga bormoqchi ekanligingizni kiriting, biz sizga eng yaxshisini topib beramiz.
+                        {{ $t('home_desc') }}
                     </p>
                 </a-col>
             </a-row>
@@ -35,7 +35,7 @@
             <a-row type="flex" justify="space-between" align="middle" class="topFilter">
                 <a-col :xs="{ span: 24 }" :lg="{ span: 6 }" :xxl="{ span: 7 }" class="filter-col">
                     <div class="dropContainer">
-                        <Dropdown :placehold="'Qayerga'" :img="'Address.png'" :drop-items="travelLocation" />
+                        <Dropdown :placehold="where" :img="'Address.png'" :drop-items="travelLocation" />
                     </div>
                 </a-col>
                 <a-col :xs="{ span: 24 }" :lg="{ span: 6 }" :xxl="{ span: 7 }">
@@ -43,7 +43,7 @@
                         <div class="pickerItems">
                             <img src="../static/images/airplane.png" alt="">
                             <p class="descGr">
-                                {{ !date ? 'Borish vaqti' : date }}
+                                {{ !date ? string_date?.[$i18n.locale] : date }}
                             </p>
                         </div>
                         
@@ -55,7 +55,7 @@
 
                 <a-col :xs="{ span: 24 }" :lg="{ span: 6 }" :xxl="{ span: 7 }">
                     <div class="dropContainer">
-                        <Dropdown :placehold="'Tur'" :img="'Address.png'" :drop-items="types" />
+                        <Dropdown :placehold="sort" :img="'Address.png'" :drop-items="types" />
                     </div>
                 </a-col>
 
@@ -70,20 +70,18 @@
                 <a-col>
                     <div class="offerItems">
                         <div class="offerTitle">
-                            <h1>Biz bilan <i>Umra</i> Ibodatini ado eting</h1>
+                            <h1>{{ $t('umra1') }}<i>Umra</i> {{ $t('umra2') }}</h1>
                         </div>
 
                         <div class="offerDescript">
-                            <span>Batafsil ma’lumot olish uchun
-                                banner ustiga bosing yoki
-                                biz bilan bog‘laning</span>
-                            <a-button>Batafsil</a-button>
+                            <span>{{ $t('umra_title') }}</span>
+                            <a-button>{{ $t('more') }}</a-button>
                         </div>
                     </div>
                 </a-col>
                 <div class="rightImages">
                     <img src="../static/images/Vector 12.png" alt="">
-                    <img src="../static/images/travell.png" alt="">
+                    <img src="../static/images/travell.png" alt="" class="travelImg">
                 </div>
             </a-row>
         </a-row>
@@ -98,12 +96,47 @@ export default {
     data() {
         return {
             travelLocation: [
-                { id: 1, name: 'New Zealend' },
-                { id: 2, name: 'India' },
-                { id: 3, name: 'Asia' },
-                {id: 4, name: 'Morocco'},
-                {id: 5, name: 'Iceland'}
+                { id: 1, name: {
+                    uz: 'Yangi Zelandiya',
+                    en: 'New Zealend',
+                    ru: 'Новая Зеландия'
+                } },
+                { id: 2, name: {
+                    uz: 'Hindiston',
+                    en: 'India',
+                    ru: 'Индия'
+                } },
+                { id: 3, name: {
+                    uz: 'Turkiya',
+                    ru: 'Турция',
+                    en: 'Turkey'
+                } },
+                {id: 4, name: {
+                    uz: 'Marokash',
+                    en: 'Morocco',
+                    ru: 'Марокко'
+                }},
+                {id: 5, name: {
+                    uz: 'Islandiya',
+                    en: 'Iceland',
+                    ru: 'Исландия'
+                }}
             ],
+            where: {
+                uz: 'Qayerga',
+                en: 'Where',
+                ru: 'Куда'
+            },
+            string_date: {
+                uz: 'Borish vaqti',
+                en: 'Time to go',
+                ru: 'Время'
+            },
+            sort: {
+                uz: 'Saralash',
+                en: 'Sort',
+                ru: 'Сортировка'
+            },
             types: this.$store.state.travelTypes,
             date: null,
             isLang: false
@@ -292,8 +325,8 @@ export default {
         z-index: 9;
 
         .offerItems {
-            width: 50%;
-            margin-left: 112px;
+            width: 55%;
+            margin-left: 100px;
             display: flex;
             justify-content: space-between;
 
@@ -309,6 +342,7 @@ export default {
                     color: #fff;
 
                     i {
+                        display: block;
                         font-style: normal;
                         font-size: 5rem;
                         font-weight: 900;
@@ -549,7 +583,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1440px) and (min-width: 960px) {
+@media screen and (max-width: 1560px) and (min-width: 960px) {
     // .ant-calendar-picker-container{
     //     left: 380px !important;
     // }
@@ -611,14 +645,19 @@ export default {
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1560px) {
     .ant-calendar-picker-container {
         left: 780px !important;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
+    .topFilter .searchCol{
+        align-self: flex-start;
+        width: 120px;
+    }
     .headerLayout {
+        height: 1042px;
         .siteLogo {
             width: 100% !important;
 
@@ -661,4 +700,66 @@ export default {
             }
         }
     }
-}</style>
+}
+
+@media screen and (max-width: 960px) {
+    .offerToTravel{
+        .ant-col{
+            display: flex;
+            align-items: center;
+            top: 78px;
+            width: calc(100% - 64px);
+            height: 160px;
+            padding: 10px;
+
+            .offerItems{
+                margin-left: 0;
+                width: 100%;
+
+                .offerDescript{
+                    row-gap: 12px;
+
+                    button.ant-btn{
+                        width: 98px;
+                        height: 28px;
+                    }
+
+                    span{
+                        font-size: 0.75rem;
+                    }
+                }
+
+                .offerTitle{
+
+                    h1{
+                        font-size: 1.15rem;
+
+                        i{
+                            display: block;
+                            font-size: 1.85rem;
+                            line-height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+        img.leftImg{
+            left: 48px;
+            top: 80px;
+            display: none;
+        }
+
+        .rightImages{
+            right: 32px;
+            top: 78px;
+            width: calc(30% - 24px);
+            height: 160px;
+            display: none;
+
+            img{
+                display: none;
+            }
+        }
+    }
+}
+</style>

@@ -14,28 +14,28 @@
                     </a-row>
                 </a-col>
                 <a-col :lg="4" :xxl="3" class="companyCol col">
-                    <h3>Kompaniya</h3>
+                    <h3>{{ $t('company') }}</h3>
 
-                    <nuxt-link to="about-us">Biz haqimizda</nuxt-link>
+                    <nuxt-link to="about-us">{{ $t('about_us') }}</nuxt-link>
 
-                    <nuxt-link to="our-team">Bizning jamoa</nuxt-link>
+                    <nuxt-link to="our-team">{{ $t('our_team') }}</nuxt-link>
                 </a-col>
                 <a-col :lg="4" :xxl="3" class="supportCol col">
-                    <h3>Qo‘llab quvatlash</h3>
+                    <h3>{{ $t('footer_support') }}</h3>
 
-                    <nuxt-link to="contact">Biz bilan aloqa</nuxt-link>
+                    <nuxt-link to="contact">{{ $t('contact_us') }}</nuxt-link>
 
-                    <nuxt-link to="#">Yordam markazi</nuxt-link>
+                    <nuxt-link to="#">{{ $t('footer_help') }}</nuxt-link>
                 </a-col>
                 <a-col :lg="4" :xxl="3" class="contactCol">
-                    <h3>Telefon raqam:</h3>
+                    <h3>{{ $t('footer_phone') }}:</h3>
 
                     <p>+998 95 144-04-44</p>
 
                     <p>+998 95 144-04-40</p>
                 </a-col>
                 <a-col :lg="5" :xxl="4" class="contactCol">
-                    <h3>Email:</h3>
+                    <h3>{{ $t('mail') }}:</h3>
                     <p>info@avantagetravel.com</p>
                 </a-col>
             </a-row>
@@ -64,6 +64,30 @@
                         </a-col>
                     </a-row>
                 </a-col>
+            </a-row>
+
+            <a-row class="mobileRow">
+
+                <div class="mobCol">
+                    <span>Legal Notice</span>
+                    <span>Privacy Policy</span>
+                </div>
+
+                <div class="mobCol">
+                    <span>Cookies</span>
+                    <span>Terms & Conditions</span>
+                </div>
+
+
+                <div class="mobPayCol">
+                    <a-row type="flex">
+                        <a-col v-for="pay in payments" :key="pay.id">
+                            <img :src="require('../static/images/'+pay.img)" alt="">
+                        </a-col>
+                    </a-row>
+                </div>
+
+                <p>Copyright © Avantage Travel. All Rights Reserved.</p>
             </a-row>
         </div>
     </footer>
@@ -126,6 +150,10 @@ export default {
         padding: 55px 0 35px 0;
         box-sizing: border-box;
 
+        .mobileRow{
+                display: none;
+            }
+
         hr{
             margin: 48px 0 24px 0;
             border: 1px solid #fff;
@@ -143,6 +171,8 @@ export default {
                     opacity: 0.8;
                 }
             }
+
+            
 
             &.bottomCol{
                 .ant-col{
@@ -213,7 +243,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1440px) and (min-width: 960px) {
+@media screen and (max-width: 1560px) and (min-width: 960px) {
     .footerLayout{
 
         .footerWrapper{
@@ -269,6 +299,79 @@ export default {
 
                     img.logo{
                         width: 190px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .footerLayout{
+
+        .footerWrapper{
+
+            .bottomCol{
+                display: none;
+            }
+
+            .mobileRow{
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+
+                p{
+                    font-size: 1.15rem;
+                    line-height: 140%;
+                    font-weight: 400;
+                    color: #fff;
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .mobPayCol{
+
+                    .ant-row-flex{
+                        justify-content: space-evenly;
+                    }
+
+                    img{
+                        max-width: 72px;
+                    }
+                }
+
+                .mobCol{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    span{
+                        font-size: 1.15rem;
+                        line-height: 140%;
+                        font-weight: 400;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .topRow{
+                flex-direction: column;
+                row-gap: 16px;
+
+                .companyCol, .supportCol,  .contactCol{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .logoCol{
+
+                    .ant-row{
+                        &:first-child{
+
+                            display: flex;
+                            justify-content: center;
+                        }
                     }
                 }
             }

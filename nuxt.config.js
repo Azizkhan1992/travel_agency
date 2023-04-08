@@ -42,7 +42,34 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/i18n'
   ],
+  i18n: {
+    locales: [
+      {
+        code: 'uz',
+        name: 'O\'zbek'
+      },
+      {
+        code: 'en',
+        name: 'English'
+      },
+      {
+        code: 'ru',
+        name: 'Русский'
+      }
+    ],
+    defaultLocale: {code: 'uz', name: 'O\'zbek'},
+    noPrefixDefaultLocale: true,
+    vueI18n: {
+      fallbackLocale: 'ru',
+      messages: {
+        uz: require('./locales/uz.json'),
+        en: require('./locales/en.json'),
+        ru: require('./locales/ru.json'),
+      },
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

@@ -33,7 +33,7 @@
                             <p class="menuTitle">Ma'lumot uchun raqamlar:</p>
                         </a-row>
 
-                        <a-row class="phone"><span>{{ contact.phone1 }}</span></a-row>
+                        <a-row class="phone"><span>{{ contact[1].phone }}</span></a-row>
                         <a-row class="phone"><span>{{ contact.phone2 }}</span></a-row>
                     </a-col>
                     <a-col :span="11">
@@ -42,7 +42,7 @@
                         </a-row>
 
                         <a-row>
-                            <span>{{ contact.email }}</span>
+                            <span>{{ contact[2].mail }}</span>
                         </a-row>
                     </a-col>
                 </a-row>
@@ -59,6 +59,9 @@ export default {
             socials: this.$store.state.socials,
             contact: this.$store.state.contacts
         }
+    },
+    mounted(){
+        console.log(this.contact)
     },
     methods: {
         close(){
@@ -167,7 +170,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1440px) and (min-width: 960px) {
+@media screen and (max-width: 1560px) and (min-width: 960px) {
     .pageListContainer{
         height: 560px !important;
 
@@ -205,6 +208,31 @@ export default {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .pageListContainer{
+
+        .pageListWrapper{
+            width: calc(100% - 32px);
+
+            .listItems{
+                row-gap: 40px;
+                margin: 0 32px 0 40px;
+
+                .contacts{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 12px;
+                }
+            }
+
+            .menuRow{
+                flex-direction: column;
+                row-gap: 24px;
             }
         }
     }

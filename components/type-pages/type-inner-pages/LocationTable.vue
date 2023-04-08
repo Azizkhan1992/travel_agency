@@ -123,7 +123,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1440px)  {
+@media screen and (max-width: 1560px)  {
  .locationContainer{
     .ant-collapse-item{
 

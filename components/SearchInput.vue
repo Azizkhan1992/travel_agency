@@ -62,7 +62,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1440px) and (min-width: 960px) {
+@media screen and (max-width: 1560px) and (min-width: 960px) {
     .searchInput{
 
         .inputWr{

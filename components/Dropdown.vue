@@ -3,7 +3,7 @@
         <div class="dropVisible">
             <div class="dropLeft">
                 <img :src="require('../static/images/' + img)" alt="">
-                <p class="descGr">{{ placehold }}</p>
+                <p class="descGr">{{ placehold?.[$i18n.locale] }}</p>
             </div>
             <div class="dropIcon" @click="checkDrop = !checkDrop">
                 <font-awesome-icon icon="fa-solid fa-chevron-down" />
@@ -12,12 +12,12 @@
         <div class="dropdownItems" :class="checkDrop ? 'visible' : 'hidden'">
             <div class="items" v-for="item in dropItems" :key="item.id">
                 <a-row v-if="item.name">
-                    <p class="descGr">{{ item.name }}</p>
+                    <p class="descGr">{{ item.name?.[$i18n.locale] }}</p>
                 </a-row>
                 <a-row v-else type="flex" justify="space-between">
                     <a-col :span="16">
-                        <p class="commonP">{{ item.title }}</p>
-                        <span class="miniP">{{ item.descript }}</span>
+                        <p class="commonP">{{ item.title?.[$i18n.locale] }}</p>
+                        <span class="miniP">{{ item.descript?.[$i18n.locale] }}</span>
                     </a-col>
                     <a-col :span="3">
                         <a-checkbox @change="onChange(item.id, $event)">
@@ -33,8 +33,8 @@ export default {
     name: 'app-drop',
     props: {
         placehold: {
-            type: String,
-            default: ''
+            type: Object,
+            default: ()=>{}
         },
         img: {
             type: String,
@@ -148,10 +148,6 @@ export default {
 
                 .ant-checkbox {
 
-                    .ant-checkbox-inner {
-                        // border-color: #03a6a0;
-                    }
-
                     &::after {
                         border: 1px solid #03a6a0;
                     }
@@ -186,7 +182,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1440px) and (min-width: 960px) {
+@media screen and (max-width: 1560px) and (min-width: 960px) {
     .dropItem {
         width: 100% !important;
     }

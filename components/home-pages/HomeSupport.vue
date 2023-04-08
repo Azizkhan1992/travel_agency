@@ -2,10 +2,10 @@
     <section class="supportContainer common">
         <a-row type="flex" justify="space-between">
             <a-col :lg="14" :xxl="14">
-                <h3>24/7 qo‘llab quvvatlash</h3>
-                <p>Lorem ipsum dolor sit amet consectetur. Auctor orci eget sit dignissim eu aliquam tellus. Quam id varius at sed risus euismod. Aenean diam enim vitae urna. Magna felis sodales sagittis tristique felis. Pretium.</p>
+                <h3>{{ $t('support_title') }}</h3>
+                <p>{{ $t('support_desc') }}</p>
 
-                <button class="btn supportBtn">Biz bilan aloqa</button>
+                <button class="btn supportBtn">{{ $t('contact_us') }}</button>
             </a-col>
             <a-col :lg="8" :xxl="5" class="humanCol">
                 <img :src="require('../../static/images/'+img.img)" alt="" v-for="img in humans" :key="img.id">
@@ -122,7 +122,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1440px) and (min-width: 960px) {
+@media screen and (max-width: 1560px) and (min-width: 960px) {
     .supportContainer{
 
         .ant-row-flex{
@@ -141,6 +141,16 @@ export default {
                     font-size: 1.15rem !important;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .supportContainer{
+
+        .ant-row-flex{
+            flex-wrap: wrap;
+            row-gap: 24px;
         }
     }
 }

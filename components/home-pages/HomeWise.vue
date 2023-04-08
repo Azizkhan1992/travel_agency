@@ -13,16 +13,40 @@ export default {
             wiseItems: [
                 {
                     id: 1,
-                    name: 'Hikmatli so‘zlar',
-                    title: 'Uzoq masofa va kam uglerodli sayohat haqida gap ketganda, aviatsiyaga alternativa yo\'q. Shuning uchun uglerod gazini to\'lash, hech bo\'lmaganda qisqa muddatda iqlim o\'zgarishi ta\'sirini cheklash',
-                    descript: 'International Air Transport Association',
+                    name: {
+                        uz: 'Hikmatli so‘zlar',
+                        en: 'Wise words',
+                        ru: 'Мудрые слова'
+                    },
+                    title: {
+                        uz: 'Uzoq masofa va kam uglerodli sayohat haqida gap ketganda, aviatsiyaga alternativa yo\'q. Shuning uchun uglerod gazini to\'lash, hech bo\'lmaganda qisqa muddatda iqlim o\'zgarishi ta\'sirini cheklash',
+                        en: 'When it comes to long-distance and low-carbon travel, there is no alternative to aviation. Paying for carbon therefore limits the impact of climate change, at least in the short term',
+                        ru: 'Когда дело доходит до дальних и низкоуглеродных путешествий, альтернативы авиации нет. Таким образом, плата за углерод ограничивает воздействие изменения климата, по крайней мере, в краткосрочной перспективе.'
+                    },
+                    descript: {
+                        uz: 'Xalqaro havo transporti assotsiatsiyasi',
+                        en: 'International Air Transport Association',
+                        ru: 'Международная ассоциация воздушного транспорта'
+                    },
                     img: 'img5.png'
                 },
                 {
                     id: 2,
-                    name: 'Hikmatli so‘zlar',
-                    title: 'Uzoq masofa va kam uglerodli sayohat haqida gap ketganda, aviatsiyaga alternativa yo\'q. Shuning uchun uglerod gazini to\'lash, hech bo\'lmaganda qisqa muddatda iqlim o\'zgarishi ta\'sirini cheklash',
-                    descript: 'International Air Transport Association',
+                    name: {
+                        uz: 'Hikmatli so‘zlar',
+                        ru: 'Мудрые слова',
+                        en: 'Wise words'
+                    },
+                    title: {
+                        uz: 'Uzoq masofa va kam uglerodli sayohat haqida gap ketganda, aviatsiyaga alternativa yo\'q. Shuning uchun uglerod gazini to\'lash, hech bo\'lmaganda qisqa muddatda iqlim o\'zgarishi ta\'sirini cheklash',
+                        en: 'When it comes to long-distance and low-carbon travel, there is no alternative to aviation. Paying for carbon therefore limits the impact of climate change, at least in the short term',
+                        ru: 'Когда дело доходит до дальних и низкоуглеродных путешествий, альтернативы авиации нет. Таким образом, плата за углерод ограничивает воздействие изменения климата, по крайней мере, в краткосрочной перспективе.'
+                    },
+                    descript: {
+                        uz: 'Xalqaro havo transporti assotsiatsiyasi',
+                        en: 'International Air Transport Association',
+                        ru: 'Международная ассоциация воздушного транспорта'
+                    },
                     img: 'img6.png'
                 }
             ]
@@ -100,7 +124,7 @@ export default {
     }
 }
 
-@media screen and (max-width: 1440px) and (min-width: 960px) {
+@media screen and (max-width: 1560px) and (min-width: 960px) {
     .wiseWordContainer{
         .swiperContainer{
 
@@ -123,6 +147,31 @@ export default {
 
                     img{
                         height: 296px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .wiseWordContainer{
+        .swiperContainer{
+
+            .swiper-container{
+
+                .swiper-slide{
+
+                    h3{
+                        font-size: 1.15rem;
+
+                        &.name{
+                            font-size: 1.85rem;
+                        }
+                    }
+
+                    span{
+                        font-size: 1rem;
                     }
                 }
             }
