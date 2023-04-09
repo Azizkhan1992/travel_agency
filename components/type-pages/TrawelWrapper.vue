@@ -25,15 +25,15 @@
                     </a-row>
                 </a-row>
                 <a-row class="titleRow">
-                    <p class="mainP">{{ place.title }}</p>
+                    <p class="mainP">{{ place.title?.[$i18n.locale] }}</p>
                 </a-row>
                 <a-row>
-                    <span class="miniP desc">{{ place.descript }}</span>
+                    <span class="miniP desc">{{ place.descript?.[$i18n.locale] }}</span>
                 </a-row>
 
                 <a-row>
                     <a-row>
-                        <p class="miniP desc">Manzillar:</p>
+                        <p class="miniP desc">{{ $t('type_address') }}:</p>
                     </a-row>
                     <a-row class="placesRow">
                         <span class="miniP" v-for="item, idx in place.places" :key="idx">{{ item }}</span>
@@ -41,15 +41,15 @@
                 </a-row>
                 <a-row type="flex" justify="space-between">
                     <a-col :span="7">
-                        <p class="miniP desc">Davlat:</p>
+                        <p class="miniP desc">{{ $t('country') }}:</p>
                         <span class="miniP">{{ place.country }}</span>
                     </a-col>
                     <a-col :span="7">
-                        <p class="miniP desc">Sayohat turi:</p>
-                        <span class="miniP">{{ place.travelType }}</span>
+                        <p class="miniP desc">{{ $t('travel_type') }}:</p>
+                        <span class="miniP">{{ place.travelType?.[$i18n.locale] }}</span>
                     </a-col>
                     <a-col :span="7">
-                        <p class="miniP desc">Sayohat davomiyligi:</p>
+                        <p class="miniP desc">{{ $t('travel_continious') }}:</p>
                         <span class="miniP">{{ place.travelContinious }}</span>
                     </a-col>
                 </a-row>
@@ -77,7 +77,7 @@
                     </a-col>
 
                     <a-col :span="7">
-                        <nuxt-link :to="`types/${place.id}`" class="travelB">Turni ko‘rish</nuxt-link>
+                        <nuxt-link :to="`types/${place.id}`" class="travelB">{{ $t('see_type') }}</nuxt-link>
                     </a-col>
                 </a-row>
             </a-col>

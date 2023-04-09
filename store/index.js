@@ -154,12 +154,24 @@ export const state = () => ({
     foundPlaces: [
         {
             id: 1,
-            title: '6 kun - Islandiya atrofida sarguzasht',
-            descript: '"Have used Intrepid for over 7 trips and loved every single one ran by them exclusively...."',
+            title: {
+                uz: '6 kun - Islandiya atrofida sarguzasht',
+                ru: '6 дней - Приключение по Исландии',
+                en: '6 days - Adventure around Iceland'
+            },
+            descript: {
+                uz: '"Intrepid-dan 7 dan ortiq sayohatlarda foydalangan va ular tomonidan boshqarilgan har bir sayohatni yaxshi ko\'rganman...."',
+                en: '"Have used Intrepid for over 7 trips and loved every single one ran by them exclusively...."',
+                ru: '"Я использовал Intrepid в более чем 7 поездках, и мне нравилась каждая поездка исключительно с ними...."'
+            },
             places: ['Reykjavik,', 'Dover,', 'Hvolsvollur,', 'Skogafoss,', 'Vatnajokull National Park'],
             country: 'Iceleand Coast South',
-            travelType: 'Shaxsiy, Jamoaviy',
-            travelContinious: '10 kun',
+            travelType: {
+                uz: 'Shaxsiy, Jamoaviy',
+                ru: 'Личное, Сообщество',
+                en: 'Personal, Community'
+            },
+            travelContinious: 10,
             sale: 20,
             oldPrice: '7 000 000 UZS',
             price: '4 500 000 UZS',
@@ -168,12 +180,24 @@ export const state = () => ({
         },
         {
             id: 2,
-            title: 'Per principles eat start too fastworks.',
-            descript: 'Teeth now quarter finance sky gmail optimize. Technologically hands closing.',
+            title: {
+                uz: 'Prinsiplarga ko\'ra, ovqatlanish juda tez boshlanadi.',
+                en: 'Per principles eat start too fastworks.',
+                ru: 'По принципам есть start too fastworks.'
+            },
+            descript: {
+                uz: 'Tishlar endi chorak moliyaviy osmon Gmail optimallashtirish. Texnologik jihatdan qo\'llar yopiladi.',
+                en: 'Teeth now quarter finance sky gmail optimize. Technologically hands closing.',
+                ru: 'Зубы сейчас четверть финансового неба gmail оптимизируют. Технологически руки закрываются.'
+            },
             places: ['Hanging streamline sorry sorry shoot go model going. Shark no a.'],
             country: 'Iceleand Coast South',
-            travelType: 'Shaxsiy, Jamoaviy',
-            travelContinious: '10 kun',
+            travelType: {
+                uz: 'Shaxsiy, Jamoaviy',
+                ru: 'Личное, Сообщество',
+                en: 'Personal, Community'
+            },
+            travelContinious: 10,
             sale: 0,
             price: '12 000 000 UZS',
             features: ['wifi1', 'kitchen', 'relocate', 'airplane'],
@@ -181,12 +205,24 @@ export const state = () => ({
         },
         {
             id: 3,
-            title: 'Ideal level engagement initiative paradigm.',
-            descript: 'Ocean moving I shark crystallize unit muted discussion stands.',
+            title: {
+                uz: 'Prinsiplarga ko\'ra, ovqatlanish juda tez boshlanadi.',
+                en: 'Per principles eat start too fastworks.',
+                ru: 'По принципам есть start too fastworks.'
+            },
+            descript: {
+                uz: 'Okean harakatlanuvchi I shark kristallash birligi ovozsiz muhokama stendlari.',
+                en: 'Ocean moving I shark crystallize unit muted discussion stands.',
+                ru: 'Океан, движущийся, я кристаллизую акулу, приглушенную дискуссионную трибуну.'
+            },
             places: ['Staircase opportunity space pushback issues. Stakeholder.'],
             country: 'Iceleand Coast South',
-            travelType: 'Shaxsiy, Jamoaviy',
-            travelContinious: '10 kun',
+            travelType: {
+                uz: 'Shaxsiy, Jamoaviy',
+                ru: 'Личное, Сообщество',
+                en: 'Personal, Community'
+            },
+            travelContinious: 10,
             sale: 0,
             price: '5 200 000 UZS',
             features: ['wifi1', 'kitchen', 'airplane'],
@@ -194,12 +230,20 @@ export const state = () => ({
         },
         {
             id: 4,
-            title: 'Can\'t before first-order are message functional.',
+            title: {
+                uz: '',
+                en: 'Can\'t before first-order are message functional.',
+                ru: 'Не может до первого порядка сообщения функциональны.'
+            },
             descript: 'Criticality power join switch seems way both when go are.',
             places: ['Focus new eod third be ipsum reference make. Loss feed data well.'],
             country: 'Iceleand Coast South',
-            travelType: 'Shaxsiy, Jamoaviy',
-            travelContinious: '10 kun',
+            travelType: {
+                uz: 'Shaxsiy, Jamoaviy',
+                ru: 'Личное, Сообщество',
+                en: 'Personal, Community'
+            },
+            travelContinious: 10,
             sale: 0,
             price: '7 500 000 UZS',
             features: ['wifi1', 'kitchen'],
@@ -207,12 +251,24 @@ export const state = () => ({
         },
         {
             id: 5,
-            title: 'Circle 2 indicators land day game. Uat reinvent no.',
-            descript: 'Innovation to when intersection tentative important looking churning.',
+            title: {
+                uz: 'Circle 2 ko\'rsatkichlari quruqlik kuni o\'yini. Uat reinvent no.',
+                en: 'Circle 2 indicators land day game. Uat reinvent no.',
+                ru: 'Обведите 2 индикатора наземного дня игры. Uat изобретать нет.'
+            },
+            descript: {
+                uz: 'Innovatsiyalar chorrahasida taxminiy muhim ko\'rinishdagi chayqalish.',
+                en: 'Innovation to when intersection tentative important looking churning.',
+                ru: 'Новшество, когда пересечение ориентировочно важно взбалтывать.'
+            },
             places: ['This masking revision unpack ditching comms. Standup ipsum for.'],
             country: 'Iceleand Coast South',
-            travelType: 'Shaxsiy, Jamoaviy',
-            travelContinious: '10 kun',
+            travelType: {
+                uz: 'Shaxsiy, Jamoaviy',
+                ru: 'Личное, Сообщество',
+                en: 'Personal, Community'
+            },
+            travelContinious: 10,
             sale: 20,
             oldPrice: '11 000 000 UZS',
             price: '8 500 000 UZS',
@@ -221,12 +277,24 @@ export const state = () => ({
         },
         {
             id: 6,
-            title: 'Strategy as 30,000ft down calculator.',
-            descript: 'Yet shower land too own. Hours conversation circle client investigation anomalies at deploy call ground.',
+            title: {
+                uz: '30 000 fut pastga kalkulyator sifatida strategiya.',
+                en: 'Strategy as 30,000ft down calculator.',
+                ru: 'Стратегия как калькулятор спуска на 30 000 футов.'
+            },
+            descript: {
+                uz: 'Biroq, dush yerlari ham o\'zlariga tegishli. Qo\'ng\'iroqlarni joylashtirishda mijozlarni tekshirish anomaliyalari bo\'lgan suhbat doirasi.',
+                en: 'Yet shower land too own. Hours conversation circle client investigation anomalies at deploy call ground.',
+                ru: 'И все же душ земли слишком собственной. Часы разговора об круге клиентов, исследующие аномалии на месте развертывания вызова.'
+            },
             places: ['Open our cadence conversation open scope jumping. Own when.'],
             country: 'Iceleand Coast South',
-            travelType: 'Shaxsiy, Jamoaviy',
-            travelContinious: '10 kun',
+            travelType: {
+                uz: 'Shaxsiy, Jamoaviy',
+                ru: 'Личное, Сообщество',
+                en: 'Personal, Community'
+            },
+            travelContinious: 10,
             sale: 0,
             price: '2 500 000 UZS',
             features: ['wifi1', 'airplane'],

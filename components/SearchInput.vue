@@ -5,7 +5,7 @@
 
             <input type="text" class="Input">
 
-            <button class="searchBtn">Manzillar</button>
+            <button class="searchBtn">{{ $t('type_address') }}</button>
         </div>
     </div>
 </template>

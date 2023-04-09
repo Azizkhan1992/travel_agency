@@ -1,11 +1,11 @@
 <template>
     <div class="childAgeContainer">
         <a-row>
-            <FilterTitle :title="'Yosh bolalimisiz'" @sendData="sendData" />
+            <FilterTitle :title="children_age" @sendData="sendData" />
         </a-row>
         <a-row class="ageRow" :class="isOpen ? 'open' : 'close'">
             <a-row>
-                <span class="commonP">Bola yoshini tanlang</span>
+                <span class="commonP">{{ $t('children_age') }}</span>
             </a-row>
             <a-row class="selectRow">
                 <a-select :default-value="provinceData[0]" style="width: 120px" @change="handleProvinceChange">
@@ -25,7 +25,12 @@ export default {
     data() {
         return {
             provinceData: ['1 yosh', '2 yosh', '3 yosh', '4 yosh', '5 yosh', '6 yosh', '7 yosh'],
-            isOpen: false
+            isOpen: false,
+            children_age: {
+                uz: 'Yosh bolalimisiz',
+                ru: 'У вас есть маленький ребенок?',
+                en: 'Do you have a young child?'
+            }
         }
     },
     methods: {

@@ -5,7 +5,7 @@
     style="width: 100%"
     :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
     :tree-data="treeData"
-    placeholder="Saralash"
+    :placeholder="sort?.[$i18n.locale]"
     tree-default-expand-all
   >
   </a-tree-select>
@@ -16,6 +16,11 @@ export default {
   data() {
     return {
       value: undefined,
+      sort: {
+        uz: 'Saralash',
+        en: 'Sorting',
+        ru: 'Сортировка'
+      },
       treeData: [
         {
             title: 'Narx bo\'yicha',

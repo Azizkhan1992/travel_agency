@@ -7,7 +7,7 @@
             </a-col>
 
             <a-col :span="5">
-                <nuxt-link to="/">
+                <nuxt-link :to="localePath('/')">
                     <img src="../static/images/logo3.png" alt="" class="pageLogo">
                 </nuxt-link>
             </a-col>
@@ -19,7 +19,7 @@
                         <font-awesome-icon :icon="['fas', 'magnifying-glass']" size="2x"/>
                     </a-col>
 
-                    <a-col :span="4" class="item world" @click="isLang = ! isLang">
+                    <a-col :span="4" class="item world" @mouseover="isLang = true" @mouseleave="isLang = false">
                         <font-awesome-icon :icon="['fas', 'globe']" size="2x"/>
                         <SelectLanguage :class="isLang ? 'open' : 'close'"/>
                     </a-col>

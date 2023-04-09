@@ -1,7 +1,15 @@
 {
+    "home_page": "Main page",
     "more": "More",
     "day": "day",
     "mail": "Email",
+    "menu": "Menu",
+    "country": "Country",
+    "travel_type": "Type of trip",
+    "travel_continious": "Duration of the trip",
+    "see_type": "View type",
+    "socials": "Social networks",
+    "meta_data": "Numbers for reference",
     "contact_us": "Contact us",
     "about_us": "About us",
     "company": "Company",
@@ -20,5 +28,12 @@
     "our_team": "Our team",
     "footer_support": "Support",
     "footer_help": "Help center",
-    "footer_phone": "Phone number"
+    "footer_phone": "Phone number",
+    "type_address": "Addresses",
+    "type_filter": "Filter",
+    "type_continious": "Duration of trip",
+    "personal_type": "Personal",
+    "group_type": "Collective",
+    "children_age": "Select the child's age",
+    "selected_types": "filter is selected"
 }

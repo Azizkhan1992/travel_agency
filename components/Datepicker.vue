@@ -1,6 +1,6 @@
 <template>
     <div class="datepickerContainer" style="position: relative;">
-        <a-date-picker :popupStyle="{color: '#ccc'}" dropdownClassName="calendar-drop" :getCalendarContainer="getCalendarContainer()" @change="onChange" :placeholder="placeholder" class="customDatepicker" />
+        <a-date-picker :popupStyle="{color: '#ccc'}" dropdownClassName="calendar-drop" :getCalendarContainer="getCalendarContainer()" @change="onChange" :placeholder="placeholder?.[$i18n.locale]" class="customDatepicker" />
     </div>
 </template>
 <script>
@@ -8,8 +8,8 @@ export default {
     name: 'app-datepicker',
     props: {
         placeholder: {
-            type: String,
-            default: ''
+            type: Object,
+            default: () => {}
         },
         dateType: {
             type: String,

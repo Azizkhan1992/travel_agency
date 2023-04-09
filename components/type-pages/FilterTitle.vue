@@ -1,7 +1,7 @@
 <template>
     <div class="filterTitle">
         <a-row type="flex" justify="space-between">
-            <p class="mainP" @click="sendData">{{ title }}</p>
+            <p class="mainP" @click="sendData">{{ title?.[$i18n.locale] }}</p>
             <font-awesome-icon :icon="['fas', 'chevron-down']" @click="sendData" :class="isOpen ? 'active' : ''" />
         </a-row>
     </div>
@@ -11,8 +11,8 @@ export default {
     name: 'filter-title',
     props: {
         title: {
-            type: String,
-            default: ''
+            type: Object,
+            default: () => {}
         }
     },
     data(){

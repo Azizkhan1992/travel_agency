@@ -8,7 +8,7 @@
                 <div>
                     <a-breadcrumb separator=">">
                         <a-breadcrumb-item>
-                            <nuxt-link class="commonP link" to="/">Asosiy sahifa</nuxt-link>
+                            <nuxt-link class="commonP link" to="/">{{ $t('home_page') }}</nuxt-link>
                         </a-breadcrumb-item>
                         <a-breadcrumb-item class="commonP">{{ pageName }}</a-breadcrumb-item>
                     </a-breadcrumb>
@@ -23,7 +23,7 @@
         <a-row v-else class="innerContent innerRow">
             <a-breadcrumb separator=">">
                 <a-breadcrumb-item>
-                    <nuxt-link class="commonP link" to="/">Asosiy sahifa</nuxt-link>
+                    <nuxt-link class="commonP link" to="/">{{ $t('home_page') }}</nuxt-link>
                 </a-breadcrumb-item>
                 <a-breadcrumb-item>
                     <nuxt-link class="commonP link" :to="`/${pageLink}`">{{ linkName }}</nuxt-link>

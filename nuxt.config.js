@@ -59,8 +59,15 @@ export default {
         name: 'Русский'
       }
     ],
-    defaultLocale: {code: 'uz', name: 'O\'zbek'},
-    noPrefixDefaultLocale: true,
+    defaultLocale: 'uz',
+    // noPrefixDefaultLocale: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected'
+    },
+    switchLocalePath: '/:lang/:route',
+    setLocaleCookie: true,
+    getLocaleCookie: 'i18n_loc',
     vueI18n: {
       fallbackLocale: 'ru',
       messages: {

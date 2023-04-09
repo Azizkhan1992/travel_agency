@@ -1,17 +1,17 @@
 <template>
     <div class="rangeContainer">
         <a-row type="flex" justify="space-between" class="openRow" >
-            <p class="mainP" @click="isOpen = !isOpen">Safar davomiyligi</p>
+            <p class="mainP" @click="isOpen = !isOpen">{{ $t('type_continious') }}</p>
             <font-awesome-icon :icon="['fas', 'chevron-down']" @click="isOpen = !isOpen" :class="isOpen ? 'active' : ''" />
         </a-row>
 
         <a-row class="filterRow" :class="isOpen ? 'open' : 'close'">
             <a-row type="flex" justify="space-between" class="limitRow">
             <a-col>
-                <p class="commonP">min: <span class="commonP">1 kun</span></p>
+                <p class="commonP">min: <span class="commonP">1 {{ $t('day') }}</span></p>
             </a-col>
             <a-col>
-                <span class="commonP">10 kun+</span>
+                <span class="commonP">10 {{$t('day')}}+</span>
             </a-col>
         </a-row>
 

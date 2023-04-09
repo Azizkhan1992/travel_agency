@@ -1,7 +1,7 @@
 <template>
     <div class="filterTopContainer">
         <a-row type="flex" justify="space-between">
-            <a-col><p class="miniP">3 ta filter tanlandi</p></a-col>
+            <a-col><p class="miniP">3 {{ $t('selected_types') }}</p></a-col>
             <a-col>
                 <font-awesome-icon :icon="['fas', 'chevron-up']" />
             </a-col>

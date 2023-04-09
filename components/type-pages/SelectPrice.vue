@@ -1,12 +1,12 @@
 <template>
     <div class="selectPriceContainer">
         <a-row>
-            <FilterTitle :title="'Narx'" @sendData="sendData" />
+            <FilterTitle :title="title" @sendData="sendData" />
         </a-row>
         <a-row class="priceRow" :class="isOpen ? 'open' : 'close'">
             <a-row type="flex" justify="space-between">
                 <a-col :span="10">
-                    <a-input :defaultValue="100" v-model="minPrice" @change="minChange" placeholder="Narx" />
+                    <a-input :defaultValue="100" v-model="minPrice" @change="minChange" :placeholder="title?.[$i18n.locale]" />
                 </a-col>
                 <a-col :span="10">
                     <a-input :defaultValue="10000" v-model="maxPrice" placeholder="Narx" @change="maxChange" />
@@ -36,7 +36,12 @@ export default {
             minPrice: 100,
             maxPrice: 10000,
             isOpen: false,
-            rangeValue: [100, 500]
+            rangeValue: [100, 500],
+            title: {
+                uz: 'Narx',
+                ru: 'Цена',
+                en: 'Price'
+            }
         }
     },
     methods: {

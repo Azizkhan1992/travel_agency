@@ -1,14 +1,14 @@
 <template>
     <div class="selectDateContainer">
         <a-row>
-            <FilterTitle :title="'Safar kunlari'" @sendData="sendData"/>
+            <FilterTitle :title="days" @sendData="sendData"/>
         </a-row>
         <a-row :class="isOpen ? 'open' : 'close'" class="dateRow">
             <a-row>
-            <Datepicker :placeholder="'Boshlanish sanasi'" :dateType="'begin'"/>
+            <Datepicker :placeholder="begin" :dateType="'begin'"/>
         </a-row>
         <a-row>
-            <Datepicker :placeholder="'Tugash sanasi'" :dateType="'end'"/>
+            <Datepicker :placeholder="end" :dateType="'end'"/>
         </a-row>
         </a-row>
     </div>
@@ -21,7 +21,22 @@ export default {
     components: {Datepicker, FilterTitle},
     data(){
         return{
-            isOpen: false
+            isOpen: false,
+            days: {
+                uz: 'Safar kunlari',
+                en: 'Travel days',
+                ru: 'Дни в пути'
+            },
+            begin: {
+                uz: 'Boshlanish sanasi',
+                ru: 'Дата начала',
+                en: 'Start date'
+            },
+            end: {
+                uz: 'Tugash sanasi',
+                en: 'End date',
+                ru: 'Дата окончания'
+            }
         }
     },
     methods: {

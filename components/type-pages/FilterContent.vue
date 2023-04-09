@@ -1,6 +1,6 @@
 <template>
     <div class="filterContainer">
-        <h3>Filter</h3>
+        <h3>{{ $t('type_filter') }}</h3>
         <FilterTop />
         <Selector/>
         <hr class="filHr"/>

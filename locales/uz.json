@@ -1,7 +1,15 @@
 {
+    "home_page": "Asosiy sahifa",
     "more": "Batafsil",
     "day": "kun",
     "mail": "Email",
+    "menu": "Menu",
+    "country": "Davlat",
+    "travel_type": "Sayohat turi",
+    "travel_continious": "Sayohat davomiyligi",
+    "see_type": "Turni ko‘rish",
+    "socials": "Ijtimoiy tarmoqlar",
+    "meta_data": "Ma'lumot uchun raqamlar",
     "contact_us": "Biz bilan aloqa",
     "about_us": "Biz haqimizda",
     "company": "Kompaniya",
@@ -20,5 +28,12 @@
     "our_team": "Bizning jamoa",
     "footer_support": "Qo‘llab quvatlash",
     "footer_help": "Yordam markazi",
-    "footer_phone": "Telefon raqam"
+    "footer_phone": "Telefon raqam",
+    "type_address": "Manzillar",
+    "type_filter": "Filter",
+    "type_continious": "Safar davomiyligi",
+    "personal_type": "Shaxsiy",
+    "group_type": "Jamoaviy",
+    "children_age": "Bola yoshini tanlang",
+    "selected_types": "ta filter tanlandi"
 }

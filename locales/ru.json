@@ -1,7 +1,15 @@
 {
+    "home_page": "Главная страница",
     "more": "Более",
     "day": "день",
     "mail": "Э-почта",
+    "menu": "Меню",
+    "country": "Страна",
+    "travel_type": "Тип поездки",
+    "travel_continious": "Продолжительность поездки",
+    "see_type": "Тип просмотра",
+    "socials": "Социальные сети",
+    "meta_data": "Цифры для справки",
     "contact_us": "Связаться с нами",
     "about_us": "О нас",
     "company": "Компания",
@@ -20,5 +28,12 @@
     "our_team": "Наша команда",
     "footer_support": "Поддерживать",
     "footer_help": "Центр помощи",
-    "footer_phone": "Номер телефона"
+    "footer_phone": "Номер телефона",
+    "type_address": "Адреса",
+    "type_filter": "Фильтр",
+    "type_continious": "Продолжительность поездки",
+    "personal_type": "Личный",
+    "group_type": "Коллектив",
+    "children_age": "Выберите возраст ребенка",
+    "selected_types": "фильтр выбран"
 }

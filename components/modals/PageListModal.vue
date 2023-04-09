@@ -8,16 +8,16 @@
                 <a-row type="flex" justify="space-between" class="menuRow">
                     <a-col :span="9">
                         <a-row>
-                            <p class="menuTitle">Menu:</p>
+                            <p class="menuTitle">{{ $t('menu') }}:</p>
                         </a-row>
                         
                         <a-row class="menu" v-for="menu in menus" :key="menu.id">
-                            <nuxt-link :to="menu.url">{{ menu.name }}</nuxt-link>
+                            <nuxt-link :to="localePath(`${menu.url}`)">{{ menu.name }}</nuxt-link>
                         </a-row>
                     </a-col>
                     <a-col :span="9">
                         <a-row>
-                            <p class="menuTitle">Ijtimoiy tarmoqlar:</p>
+                            <p class="menuTitle">{{ $t('socials') }}:</p>
                         </a-row>
 
                         <a-row class="socials" v-for="social in socials" :key="social.id">
@@ -30,7 +30,7 @@
                 <a-row class="contacts">
                     <a-col :span="11">
                         <a-row>
-                            <p class="menuTitle">Ma'lumot uchun raqamlar:</p>
+                            <p class="menuTitle">{{ $t('meta_data') }}:</p>
                         </a-row>
 
                         <a-row class="phone"><span>{{ contact[1].phone }}</span></a-row>
@@ -59,9 +59,6 @@ export default {
             socials: this.$store.state.socials,
             contact: this.$store.state.contacts
         }
-    },
-    mounted(){
-        console.log(this.contact)
     },
     methods: {
         close(){

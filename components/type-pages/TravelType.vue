@@ -1,19 +1,19 @@
 <template>
     <div class="travelTypeContainer">
         <a-row>
-            <FilterTitle :title="'Safar turi'" @sendData="sendData" />
+            <FilterTitle :title="title" @sendData="sendData" />
         </a-row>
 
         <a-row class="checkRow" :class="isOpen ? 'open' : 'close'">
             <a-row>
                 <a-checkbox @change="onChangeP" class="commonP">
-                    Shaxsiy
+                    {{ $t('personal_type') }}
                 </a-checkbox>
             </a-row>
 
             <a-row>
                 <a-checkbox @change="onChangeG" class="commonP">
-                    Jamoaviy
+                    {{ $t('group_type') }}
                 </a-checkbox>
             </a-row>
         </a-row>
@@ -26,7 +26,12 @@ export default {
     components: { FilterTitle },
     data() {
         return {
-            isOpen: false
+            isOpen: false,
+            title: {
+                uz: 'Safar turi',
+                en: 'Type of trip',
+                ru: 'Тип поездки'
+            }
         }
     },
     methods: {
